@@ -1,9 +1,11 @@
 package com.example.radiosun;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,6 +45,18 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,R.string.main_menu_opcion2,Toast.LENGTH_LONG).show();
         }else if(id==R.id.opc3){
             Toast.makeText(this,R.string.main_menu_opcion3,Toast.LENGTH_LONG).show();
+        }else if(id==R.id.opc5) {
+            AlertDialog.Builder miDialogo = new AlertDialog.Builder(MainActivity.this);
+            miDialogo.setTitle("Nuevo Sitio");
+            miDialogo.setMessage("Ingrese consumo");
+            miDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent goHome = new Intent(MainActivity.this, Map.class);
+                    startActivity(goHome);
+                }
+            });
+        miDialogo.show();
         }else{
             Toast.makeText(this,R.string.main_menu_opcion4,Toast.LENGTH_LONG).show();
         }

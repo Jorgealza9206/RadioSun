@@ -10,6 +10,10 @@
         android:title="Mapa"
         />
     <item
+        android:id="@+id/opc5"
+        android:title="Test Dialog"
+        />
+    <item
         android:id="@+id/opc3"
         android:title="Configuración"
         />
