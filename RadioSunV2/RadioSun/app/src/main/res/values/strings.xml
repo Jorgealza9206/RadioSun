@@ -37,7 +37,7 @@
     <string name="main_menu_opcion3">Configuración</string>
     <string name="main_menu_opcion4">Acerca de</string>
 
-    //Strings de registro
+    //Strings de registro sitio
 
     <string name="registrositio_txvnombre">Ingrese nombre de sitio</string>
     <string name="registrositio_btnconsumo">Agregar Consumo</string>

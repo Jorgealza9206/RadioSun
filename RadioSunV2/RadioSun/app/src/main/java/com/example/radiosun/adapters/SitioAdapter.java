@@ -1,4 +1,4 @@
-package com.example.radiosun.adapters;
+/*package com.example.radiosun.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,13 +34,13 @@ public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRe
     }
 
     @Override
-    public int getItemCount() {
+   public int getItemCount() {
         return 0;
     }
 
     public class ViewHolderRegistro extends RecyclerView.ViewHolder {
 
-        public ViewHolderRegistro(@NonNull View itemView) {
+        public ViewHolderRegistro(@NonNull View itemView){
             int id;
             TextView txtNombreCompleto;
             TextView txtCoordenadas;
@@ -49,4 +49,4 @@ public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRe
             super(itemView);
         }
     }
-}
+}*/
