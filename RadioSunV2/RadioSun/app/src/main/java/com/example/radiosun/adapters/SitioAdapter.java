@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radiosun.R;
+import com.example.radiosun.modelos.Sitio;
 
 import java.util.ArrayList;
 
