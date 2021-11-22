@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/registro_sitio_txvMes"
+    android:id="@+id/registro_sitio_txvMes1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/COLOR_3"
@@ -53,11 +53,12 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:hint="Radiación"
-        app:layout_constraintTop_toBottomOf="@+id/registrositio_coordenadas"
-        tools:layout_editor_absoluteX="45dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrositio_coordenadas" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/registro_sitio_radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -79,14 +80,14 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/registro_sitio_txvMes"
+        android:id="@+id/registro_sitio_txvMes1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:hint="Mes 1(kWh)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_radioGroup" />
 
     <EditText
         android:id="@+id/registro_sitio_txvMes2"
@@ -94,7 +95,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Mes 2(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes" />
+        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes1" />
 
     <EditText
         android:id="@+id/registro_sitio_txvMes3"
