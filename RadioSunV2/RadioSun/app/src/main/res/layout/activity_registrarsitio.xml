@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/registro_sitio_txvMes1"
+    android:id="@+id/registro_sitio_txvMes0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/COLOR_3"
@@ -24,7 +24,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1052dp"
+        android:layout_height="746dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_toolbar">
 
         <LinearLayout
@@ -34,7 +37,7 @@
 
             <EditText
                 android:id="@+id/registro_nombresitio"
-                android:layout_width="430dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:ems="10"
                 android:hint="@string/registrositio_txvnombre"
@@ -76,15 +79,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Autonomo" />
+
             </RadioGroup>
 
             <EditText
                 android:id="@+id/registro_sitio_txvMes1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:gravity="center"
-                android:hint="Mes 1(kWh)" />
+                android:ems="10"
+                android:hint="Mes 1(kWh)"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/registro_sitio_txvMes2"
@@ -122,13 +127,6 @@
                 android:hint="Mes 6(kWh)" />
 
             <TextView
-                android:id="@+id/registrositio_Respuesta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="inherit"
-                android:textSize="34sp" />
-
-            <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +139,8 @@
                 android:id="@+id/registro_sitioDespegable"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:spinnerMode="dropdown" />
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/registrositio_btnconsumo"
@@ -158,6 +157,14 @@
                 android:gravity="center"
                 android:text="# de Paneles"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/registrositio_Respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
 
         </LinearLayout>
     </ScrollView>

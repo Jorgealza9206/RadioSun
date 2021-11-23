@@ -5,15 +5,15 @@ import static com.example.radiosun.R.layout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.radiosun.clases.Mensajes;
-import com.example.radiosun.clases.dao.SitioDAO;
-import com.example.radiosun.modelos.Sitio;
 
 public class RegistrarSitio extends AppCompatActivity {
 
@@ -35,17 +35,23 @@ public class RegistrarSitio extends AppCompatActivity {
         EditText txtMes5 = (EditText) findViewById(R.id.registro_sitio_txvMes5);
         EditText txtMes6 = (EditText) findViewById(R.id.registro_sitio_txvMes6);
         Button btnInsertar = (Button) findViewById(id.registrositio_btnconsumo);
-        //TextView txtPaneles = (TextView) findViewById(id.registrositio_Respuesta);
+        TextView txtPaneles = (TextView) findViewById(id.registrositio_Respuesta);
+        Spinner desplegable = (Spinner) findViewById(id.registro_sitioDespegable);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.potencia_paneles, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        desplegable.setAdapter(adapter);
 
         btnInsertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(camposVacios(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6)){
-                    new Mensajes(view.getContext()).snackbar(view,"Digite los datos en blanco");
+                    new Mensajes(view.getContext()).toast("Digite los datos en blanco");
                 }else{
-                    long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6);
-                    new Mensajes(view.getContext()).snackbar(view,"Se ha agregado el registro correctamente"+String.valueOf(id));
-                    //txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6));
+                    //long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6);
+                    new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente"/*+String.valueOf(id)*/);
+                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6));
                 }
             }
         }
@@ -53,7 +59,8 @@ public class RegistrarSitio extends AppCompatActivity {
         );
     }
 
-    public boolean camposVacios(EditText nombres, EditText radiacion, EditText mes1, EditText mes2, EditText mes3, EditText mes4, EditText mes5, EditText mes6){
+    public boolean camposVacios(EditText nombres, EditText radiacion, EditText mes1, EditText mes2,
+                                EditText mes3, EditText mes4, EditText mes5, EditText mes6){
 
         boolean vacios = false;
 
@@ -69,7 +76,7 @@ public class RegistrarSitio extends AppCompatActivity {
         return vacios;
     }
 
-    /*public String paneles(EditText radiacion,EditText mes1, EditText mes2, EditText mes3,
+    public String paneles(EditText radiacion,EditText mes1, EditText mes2, EditText mes3,
                             EditText mes4, EditText mes5, EditText mes6){
 
         double r = Double.parseDouble(radiacion.getText().toString());
@@ -79,6 +86,7 @@ public class RegistrarSitio extends AppCompatActivity {
         double m4 = Double.parseDouble(mes4.getText().toString());
         double m5 = Double.parseDouble(mes5.getText().toString());
         double m6 = Double.parseDouble(mes6.getText().toString());
+        //double p = Double.parseDouble(panel.toString());
 
         double[] consumo = {m1,m2,m3,m4,m5,m6};
         double maximo = consumo[0];
@@ -93,10 +101,10 @@ public class RegistrarSitio extends AppCompatActivity {
 
         return String.valueOf(maximo);
 
-    }*/
+    }
 
-    private long insertar(EditText nombres, EditText radiacion, EditText mes1, EditText mes2,
-                          EditText mes3, EditText mes4, EditText mes5, EditText mes6){
+    /*private long insertar(@NonNull EditText nombres, @NonNull EditText radiacion, @NonNull EditText mes1, @NonNull EditText mes2,
+                          @NonNull EditText mes3, @NonNull EditText mes4, @NonNull EditText mes5, @NonNull EditText mes6){
         long id = 0;
 
         Sitio sit = new Sitio();
@@ -114,6 +122,6 @@ public class RegistrarSitio extends AppCompatActivity {
         id = stdao.Insertar(sit);
 
         return id;
-    }
+    }*/
 
 }
