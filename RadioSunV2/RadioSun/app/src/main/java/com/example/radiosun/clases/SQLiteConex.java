@@ -17,14 +17,14 @@ public class SQLiteConex extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE sitios id INTEGER NOT NULL,nombre TEXT NOT NULL," +
-                "radiaciónINTEGER NOT NULL," +
+                "radiación REAL NOT NULL," +
                 "consumo BLOB NOT NULL," +
-                "mes 1 INTEGER NOT NULL," +
-                "mes 2 tINTEGER NOT NULL," +
-                "mes 3 tINTEGER NOT NULL," +
-                "mes 4 INTEGER NOT NULL," +
-                "mes 5 INTEGER NOT NULL," +
-                "mes 6 INTEGER NOT NULL," +
+                "mes 1 REAL NOT NULL," +
+                "mes 2 REAL NOT NULL," +
+                "mes 3 REAL NOT NULL," +
+                "mes 4 REAL NOT NULL," +
+                "mes 5 REAL NOT NULL," +
+                "mes 6 REAL NOT NULL," +
                 "PRIMARY KEY(id AUTOINCREMENT))");
     }
 
