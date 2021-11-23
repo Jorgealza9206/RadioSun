@@ -21,7 +21,7 @@ public class RegistrarSitio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_registrarsitio);
 
-        EditText txtNombre = (EditText) findViewById(R.id.registro_nombresitio);
+        /*EditText txtNombre = (EditText) findViewById(R.id.registro_nombresitio);
         //TextView txtCoordenadas = (TextView) findViewById(R.id.registrositio_coordenadas);
         EditText txtRadiacion = (EditText) findViewById(R.id.registrositio_radiacion);
         //RadioGroup rgConsumo = (RadioGroup) findViewById(id.registro_sitio_radioGroup);
@@ -108,5 +108,6 @@ public class RegistrarSitio extends AppCompatActivity {
         id = stdao.Insertar(sit);
 
         return id;
+    }*/
     }
 }

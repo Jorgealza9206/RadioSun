@@ -41,6 +41,19 @@
 
     <string name="registrositio_txvnombre">Ingrese nombre de sitio</string>
     <string name="registrositio_btnconsumo">Agregar Consumo</string>
+    <string-array name="potencia_paneles">
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>100</item>
+        <item>150</item>
+        <item>170</item>
+        <item>180</item>
+        <item>200</item>
+        <item>290</item>
+        <item>445</item>
+        <item>460</item>
+    </string-array>
 
 
 </resources>

@@ -22,132 +22,144 @@
         app:title="Registro de Sitio"
         app:titleTextColor="@color/COLOR_4" />
 
-    <EditText
-        android:id="@+id/registro_nombresitio"
-        android:layout_width="324dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:hint="@string/registrositio_txvnombre"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/registrositio_coordenadas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1052dp"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar">
 
-    <TextView
-        android:id="@+id/registrositio_coordenadas"
-        android:layout_width="320dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="53dp"
-        android:gravity="center"
-        android:text="Coordenadas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registro_nombresitio" />
-
-    <EditText
-        android:id="@+id/registrositio_radiacion"
-        android:layout_width="321dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:hint="Radiación"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrositio_coordenadas" />
-
-    <RadioGroup
-        android:id="@+id/registro_sitio_radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrositio_radiacion">
-
-        <RadioButton
-            android:id="@+id/registro_sitio_radioButtonInterconectado"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Interconectado" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/registro_sitio_radioButtonAutonomo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Autonomo" />
-    </RadioGroup>
+            <EditText
+                android:id="@+id/registro_nombresitio"
+                android:layout_width="430dp"
+                android:layout_height="43dp"
+                android:ems="10"
+                android:hint="@string/registrositio_txvnombre"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:hint="Mes 1(kWh)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_radioGroup" />
+            <TextView
+                android:id="@+id/registrositio_coordenadas"
+                android:layout_width="320dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Coordenadas" />
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Mes 2(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes1" />
+            <EditText
+                android:id="@+id/registrositio_radiacion"
+                android:layout_width="321dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:hint="Radiación" />
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Mes 3(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes2" />
+            <RadioGroup
+                android:id="@+id/registro_sitio_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp">
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Mes 4(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes3" />
+                <RadioButton
+                    android:id="@+id/registro_sitio_radioButtonInterconectado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interconectado" />
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Mes 5(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes4" />
+                <RadioButton
+                    android:id="@+id/registro_sitio_radioButtonAutonomo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autonomo" />
+            </RadioGroup>
 
-    <EditText
-        android:id="@+id/registro_sitio_txvMes6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Mes 6(kWh)"
-        app:layout_constraintTop_toBottomOf="@+id/registro_sitio_txvMes5" />
+            <EditText
+                android:id="@+id/registro_sitio_txvMes1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:hint="Mes 1(kWh)" />
 
-    <Button
-        android:id="@+id/registrositio_btnconsumo"
-        android:layout_width="303dp"
-        android:layout_height="77dp"
-        android:text="@string/registrositio_btnconsumo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/registro_sitio_txvMes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mes 2(kWh)" />
 
-    <TextView
-        android:id="@+id/registrositio_paneles"
-        android:layout_width="0dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:text="# de Paneles"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrositio_btnconsumo" />
+            <EditText
+                android:id="@+id/registro_sitio_txvMes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mes 3(kWh)" />
+
+            <EditText
+                android:id="@+id/registro_sitio_txvMes4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mes 4(kWh)" />
+
+            <EditText
+                android:id="@+id/registro_sitio_txvMes5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mes 5(kWh)" />
+
+            <EditText
+                android:id="@+id/registro_sitio_txvMes6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mes 6(kWh)" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tipo de Panel"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/registro_sitioDespegable"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/registrositio_btnconsumo"
+                android:layout_width="303dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center"
+                android:text="@string/registrositio_btnconsumo" />
+
+            <TextView
+                android:id="@+id/registrositio_numeropaneles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center"
+                android:text="# de Paneles"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/registrositio_Respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="inherit"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
