@@ -1,8 +1,8 @@
 package com.example.radiosun;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistrarSitio extends AppCompatActivity {
 
