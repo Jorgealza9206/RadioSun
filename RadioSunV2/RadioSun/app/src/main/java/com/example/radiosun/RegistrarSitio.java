@@ -108,8 +108,6 @@ public class RegistrarSitio extends AppCompatActivity {
 
         id = stdao.Insertar(sit);
 
-        txtPaneles = 
-
         return id;
     }
 }
