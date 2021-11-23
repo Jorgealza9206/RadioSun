@@ -122,6 +122,13 @@
                 android:hint="Mes 6(kWh)" />
 
             <TextView
+                android:id="@+id/registrositio_Respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="inherit"
+                android:textSize="34sp" />
+
+            <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,13 +158,6 @@
                 android:gravity="center"
                 android:text="# de Paneles"
                 android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/registrositio_Respuesta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="inherit"
-                android:textSize="34sp" />
 
         </LinearLayout>
     </ScrollView>
