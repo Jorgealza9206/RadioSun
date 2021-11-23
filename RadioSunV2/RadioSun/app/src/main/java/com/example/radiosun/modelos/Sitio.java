@@ -3,14 +3,14 @@ package com.example.radiosun.modelos;
 public class Sitio {
     private int id;
     private String nombre;
-    private int radiacion;
+    private double radiacion;
     private boolean consumo;
-    private int mes_1;
-    private int mes_2;
-    private int mes_3;
-    private int mes_4;
-    private int mes_5;
-    private int mes_6;
+    private double mes_1;
+    private double mes_2;
+    private double mes_3;
+    private double mes_4;
+    private double mes_5;
+    private double mes_6;
 
     public Sitio() {
     }
@@ -31,11 +31,11 @@ public class Sitio {
         this.nombre = nombre;
     }
 
-    public int getRadiacion() {
+    public double getRadiacion() {
         return radiacion;
     }
 
-    public void setRadiacion(int radiacion) {
+    public void setRadiacion(double radiacion) {
         this.radiacion = radiacion;
     }
 
@@ -47,51 +47,51 @@ public class Sitio {
         this.consumo = consumo;
     }
 
-    public int getMes_1() {
+    public double getMes_1() {
         return mes_1;
     }
 
-    public void setMes_1(int mes_1) {
+    public void setMes_1(double mes_1) {
         this.mes_1 = mes_1;
     }
 
-    public int getMes_2() {
+    public double getMes_2() {
         return mes_2;
     }
 
-    public void setMes_2(int mes_2) {
+    public void setMes_2(double mes_2) {
         this.mes_2 = mes_2;
     }
 
-    public int getMes_3() {
+    public double getMes_3() {
         return mes_3;
     }
 
-    public void setMes_3(int mes_3) {
+    public void setMes_3(double mes_3) {
         this.mes_3 = mes_3;
     }
 
-    public int getMes_4() {
+    public double getMes_4() {
         return mes_4;
     }
 
-    public void setMes_4(int mes_4) {
+    public void setMes_4(double mes_4) {
         this.mes_4 = mes_4;
     }
 
-    public int getMes_5() {
+    public double getMes_5() {
         return mes_5;
     }
 
-    public void setMes_5(int mes_5) {
+    public void setMes_5(double mes_5) {
         this.mes_5 = mes_5;
     }
 
-    public int getMes_6() {
+    public double getMes_6() {
         return mes_6;
     }
 
-    public void setMes_6(int mes_6) {
+    public void setMes_6(double mes_6) {
         this.mes_6 = mes_6;
     }
 }
