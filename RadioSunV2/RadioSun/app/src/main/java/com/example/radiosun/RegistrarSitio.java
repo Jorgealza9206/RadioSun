@@ -51,7 +51,7 @@ public class RegistrarSitio extends AppCompatActivity {
                 }else{
                     //long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6);
                     new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente"/*+String.valueOf(id)*/);
-                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6));
+                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,desplegable));
                 }
             }
         }
@@ -77,7 +77,7 @@ public class RegistrarSitio extends AppCompatActivity {
     }
 
     public String paneles(EditText radiacion,EditText mes1, EditText mes2, EditText mes3,
-                            EditText mes4, EditText mes5, EditText mes6){
+                            EditText mes4, EditText mes5, EditText mes6, Spinner sp_panel){
 
         double r = Double.parseDouble(radiacion.getText().toString());
         double m1 = Double.parseDouble(mes1.getText().toString());
@@ -86,7 +86,7 @@ public class RegistrarSitio extends AppCompatActivity {
         double m4 = Double.parseDouble(mes4.getText().toString());
         double m5 = Double.parseDouble(mes5.getText().toString());
         double m6 = Double.parseDouble(mes6.getText().toString());
-        //double p = Double.parseDouble(panel.toString());
+        double p = Double.parseDouble((String) sp_panel.getSelectedItem());
 
         double[] consumo = {m1,m2,m3,m4,m5,m6};
         double maximo = consumo[0];
@@ -96,7 +96,7 @@ public class RegistrarSitio extends AppCompatActivity {
                 maximo = consumo[i];
             }
         }
-        maximo = (((maximo/30.0)/r)*1000.0)/445.0;
+        maximo = (((maximo/30.0)/r)*1000.0)/p;
         maximo = Math.ceil(maximo);
 
         return String.valueOf(maximo);
