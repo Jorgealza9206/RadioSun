@@ -25,6 +25,8 @@ public class SQLiteConex extends SQLiteOpenHelper
                 "mes 4 REAL NOT NULL," +
                 "mes 5 REAL NOT NULL," +
                 "mes 6 REAL NOT NULL," +
+                "Potencia del panel REAL NOT NULL," +
+                "Número de paneles REAL NOT NULL," +
                 "PRIMARY KEY(id AUTOINCREMENT))");
     }
 

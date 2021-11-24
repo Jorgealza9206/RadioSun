@@ -14,13 +14,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.radiosun.clases.Mensajes;
+import com.example.radiosun.clases.dao.SitioDAO;
+import com.example.radiosun.modelos.Sitio;
 
 public class RegistrarSitio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_registrarsitio);
+        setContentView(R.layout.activity_registrarsitio);
 
         EditText txtNombre = (EditText) findViewById(R.id.registro_nombresitio);
         //TextView txtCoordenadas = (TextView) findViewById(R.id.registrositio_coordenadas);
@@ -49,9 +51,12 @@ public class RegistrarSitio extends AppCompatActivity {
                 if(camposVacios(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6)){
                     new Mensajes(view.getContext()).toast("Digite los datos en blanco");
                 }else{
-                    //long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6);
-                    new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente"/*+String.valueOf(id)*/);
-                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,desplegable));
+                    long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,
+                            desplegable);
+                    new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente " + String.valueOf(id));
+                    //onBackPressed();
+                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,
+                            desplegable));
                 }
             }
         }
@@ -103,8 +108,9 @@ public class RegistrarSitio extends AppCompatActivity {
 
     }
 
-    /*private long insertar(@NonNull EditText nombres, @NonNull EditText radiacion, @NonNull EditText mes1, @NonNull EditText mes2,
-                          @NonNull EditText mes3, @NonNull EditText mes4, @NonNull EditText mes5, @NonNull EditText mes6){
+    private long insertar(EditText nombres, EditText radiacion, EditText mes1, EditText mes2,
+                          EditText mes3, EditText mes4, EditText mes5, EditText mes6,
+                          Spinner sp_panel){
         long id = 0;
 
         Sitio sit = new Sitio();
@@ -116,12 +122,15 @@ public class RegistrarSitio extends AppCompatActivity {
         sit.setMes_4(Double.parseDouble(mes4.getText().toString()));
         sit.setMes_5(Double.parseDouble(mes5.getText().toString()));
         sit.setMes_6(Double.parseDouble(mes6.getText().toString()));
+        sit.setP_panel(Double.parseDouble((String) sp_panel.getSelectedItem()));
+        sit.setN_panel(Double.parseDouble(paneles(radiacion, mes1, mes2, mes3, mes4, mes5,
+                mes6, sp_panel)));
 
         SitioDAO stdao = new SitioDAO(this);
 
         id = stdao.Insertar(sit);
 
         return id;
-    }*/
+    }
 
 }

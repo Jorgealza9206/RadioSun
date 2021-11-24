@@ -3,6 +3,7 @@ package com.example.ejemplofragmentos;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import clases.Operacion;
+import viewmodels.OperacionViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,7 +78,14 @@ public class BlankFragment2 extends Fragment {
             public void onClick(View v) {
                 int num1 = Integer.parseInt(txtNumero1.getText().toString());
                 int num2 = Integer.parseInt(txtNumero2.getText().toString());
-                txvResultado.setText(String.valueOf(num1+num2));
+                //txvResultado.setText(String.valueOf(num1+num2));
+                Operacion op = new Operacion();
+                op.setNumero2(num1);
+                op.setNumero2(num2);
+
+                OperacionViewModel operacionVM = ViewModelProviders.of(
+                        getActivity()).get( OperacionViewModel.class);
+                operacionVM.setOperacion(op);
             }
         });
 

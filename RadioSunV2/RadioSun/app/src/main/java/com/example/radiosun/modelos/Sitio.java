@@ -11,6 +11,8 @@ public class Sitio {
     private double mes_4;
     private double mes_5;
     private double mes_6;
+    private double p_panel;
+    private double n_panel;
 
     public Sitio() {
     }
@@ -93,5 +95,21 @@ public class Sitio {
 
     public void setMes_6(double mes_6) {
         this.mes_6 = mes_6;
+    }
+
+    public double getP_panel() {
+        return p_panel;
+    }
+
+    public void setP_panel(double p_panel) {
+        this.p_panel = p_panel;
+    }
+
+    public double getN_panel() {
+        return n_panel;
+    }
+
+    public void setN_panel(double n_panel) {
+        this.n_panel = n_panel;
     }
 }

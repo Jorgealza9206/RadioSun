@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,6 +25,25 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar home_toolbar = (Toolbar) findViewById(R.id.home_toolbar);
         setSupportActionBar(home_toolbar);
+
+        ImageButton TusSitios = (ImageButton) findViewById(R.id.btn_missitios);
+        ImageButton Mapas = (ImageButton) findViewById(R.id.home_button_Maps);
+
+        TusSitios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goSitios = new Intent(MainActivity.this, Sitios.class);
+                startActivity(goSitios);
+            }
+        });
+
+        Mapas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goMap = new Intent(MainActivity.this, Map.class);
+                startActivity(goMap);
+            }
+        });
 
     }
 
@@ -40,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id==R.id.opc1){
-            Toast.makeText(this,R.string.main_menu_opcion1,Toast.LENGTH_LONG).show();
+            Intent goSitios = new Intent(MainActivity.this, Sitios.class);
+            startActivity(goSitios);
         }else if(id==R.id.opc2){
-            Toast.makeText(this,R.string.main_menu_opcion2,Toast.LENGTH_LONG).show();
+            Intent goMap = new Intent(MainActivity.this, Map.class);
+            startActivity(goMap);
         }else if(id==R.id.opc3){
             Toast.makeText(this,R.string.main_menu_opcion3,Toast.LENGTH_LONG).show();
         }else if(id==R.id.opc5) {
