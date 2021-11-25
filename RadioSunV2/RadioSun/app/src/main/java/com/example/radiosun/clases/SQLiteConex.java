@@ -9,25 +9,29 @@ import androidx.annotation.Nullable;
 public class SQLiteConex extends SQLiteOpenHelper
 {
 
+    private Context context;
+
     public static final  String nombredb = "Radiosun.db";
 
     public  SQLiteConex(@Nullable Context c){
-        super(c, nombredb,null,2);
+        super(c, nombredb,null,1);
+        this.context = c;
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE sitios id INTEGER NOT NULL,nombre TEXT NOT NULL," +
-                "radiación REAL NOT NULL," +
+        db.execSQL("CREATE TABLE sitios"+
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nombre TEXT NOT NULL," +
+                "radiacion REAL NOT NULL," +
                 "consumo BLOB NOT NULL," +
-                "mes 1 REAL NOT NULL," +
-                "mes 2 REAL NOT NULL," +
-                "mes 3 REAL NOT NULL," +
-                "mes 4 REAL NOT NULL," +
-                "mes 5 REAL NOT NULL," +
-                "mes 6 REAL NOT NULL," +
-                "Potencia del panel REAL NOT NULL," +
-                "Número de paneles REAL NOT NULL," +
-                "PRIMARY KEY(id AUTOINCREMENT))");
+                "mes_1 REAL NOT NULL," +
+                "mes_2 REAL NOT NULL," +
+                "mes_3 REAL NOT NULL," +
+                "mes_4 REAL NOT NULL," +
+                "mes_5 REAL NOT NULL," +
+                "mes_6 REAL NOT NULL," +
+                "potencia_del_panel REAL NOT NULL," +
+                "numero_de_paneles REAL NOT NULL)");
     }
 
     @Override

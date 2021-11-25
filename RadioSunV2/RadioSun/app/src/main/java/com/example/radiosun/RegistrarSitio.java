@@ -1,7 +1,6 @@
 package com.example.radiosun;
 
 import static com.example.radiosun.R.id;
-import static com.example.radiosun.R.layout;
 
 import android.os.Bundle;
 import android.view.View;

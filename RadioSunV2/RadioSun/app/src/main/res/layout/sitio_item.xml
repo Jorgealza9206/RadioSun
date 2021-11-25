@@ -44,11 +44,11 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/sitio_item_coordenadas"
+                            android:id="@+id/sitio_item_radiacion"
                             android:layout_width="250dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Coordenadas" />
+                            android:text="Radiación" />
 
                         <ImageButton
                             android:id="@+id/usuario_item_btnEditar"

@@ -37,8 +37,8 @@ public class SitioDAO extends SQLiteConex {
             valores.put("mes_4",sit.getMes_4());
             valores.put("mes_5",sit.getMes_5());
             valores.put("mes_6",sit.getMes_6());
-            valores.put("p_paneles",sit.getP_panel());
-            valores.put("n_paneles",sit.getN_panel());
+            valores.put("potencia_del_panel ",sit.getP_panel());
+            valores.put("numero_de_paneles",sit.getN_panel());
 
             id = db.insert("sitios", "null", valores);
         }catch(Exception ex){
