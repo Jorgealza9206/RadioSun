@@ -131,7 +131,7 @@ public class RegistrarSitio extends AppCompatActivity {
 
         id = stdao.Insertar(sit);
 
-        //ArrayList<Sitio> sitios= stdao.listar();
+        ArrayList<Sitio> sitios= stdao.listar();
 
         return id;
     }

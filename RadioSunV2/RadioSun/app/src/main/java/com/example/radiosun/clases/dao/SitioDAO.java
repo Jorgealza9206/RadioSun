@@ -58,8 +58,8 @@ public class SitioDAO extends SQLiteConex {
 
         ArrayList<Sitio> sitios = new ArrayList<>();
 
-        Cursor cregistros = db.rawQuery("select nombre, radiacion, consumo, mes_1, mes_2" +
-                "mes_3,mes_4,mes_5,mes_6,potencial_del_panel,numero_de_paneles" +
+        Cursor cregistros = db.rawQuery("select nombre, radiacion, consumo, mes_1, mes_2," +
+                "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles" +
                 " from sitios",null);
 
         if(cregistros.moveToFirst()){
