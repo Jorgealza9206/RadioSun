@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="Radiación"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 tools:layout_conversion_absoluteHeight="51dp"
                 tools:layout_conversion_absoluteWidth="321dp"
                 tools:layout_editor_absoluteX="45dp"

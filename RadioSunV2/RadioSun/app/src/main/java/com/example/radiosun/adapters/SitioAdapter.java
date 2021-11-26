@@ -10,19 +10,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.radiosun.R;
+import com.example.radiosun.modelos.Sitio;
 
 import java.util.ArrayList;
 
 public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRegistro> {
 
-    ArrayList nombre;
-    ArrayList radiacion;
+    ArrayList<Sitio> registros;
+
     private Context context;
 
-    public SitioAdapter(Context c, ArrayList nombre, ArrayList radiacion){
+    public SitioAdapter(Context c, ArrayList<Sitio> r){
 
-        this.nombre = nombre;
-        this.radiacion = radiacion;
+        this.registros = r;
         this.context = c;
     }
 
