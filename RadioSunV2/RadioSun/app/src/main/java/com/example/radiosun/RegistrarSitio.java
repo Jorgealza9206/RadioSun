@@ -16,6 +16,8 @@ import com.example.radiosun.clases.Mensajes;
 import com.example.radiosun.clases.dao.SitioDAO;
 import com.example.radiosun.modelos.Sitio;
 
+import java.util.ArrayList;
+
 public class RegistrarSitio extends AppCompatActivity {
 
     @Override
@@ -128,6 +130,8 @@ public class RegistrarSitio extends AppCompatActivity {
         SitioDAO stdao = new SitioDAO(this);
 
         id = stdao.Insertar(sit);
+
+        //ArrayList<Sitio> sitios= stdao.listar();
 
         return id;
     }
