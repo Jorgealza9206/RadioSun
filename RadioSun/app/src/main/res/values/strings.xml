@@ -65,5 +65,6 @@
         RadioSun se encuentra en fase de desarrollo y pruebas, cualquier incoveniente favor informar a los desarrolladores.
 
         </string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

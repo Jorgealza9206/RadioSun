@@ -32,6 +32,8 @@ public class SitioDAO extends SQLiteConex {
 
             ContentValues valores= new ContentValues();
             valores.put("nombre",sit.getNombre());
+            valores.put("latitud",sit.getLatitud());
+            valores.put("longitud",sit.getLongitud());
             valores.put("radiacion",sit.getRadiacion());
             valores.put("consumo",sit.isConsumo());
             valores.put("mes_1",sit.getMes_1());
@@ -58,23 +60,25 @@ public class SitioDAO extends SQLiteConex {
 
         ArrayList<Sitio> sitios = new ArrayList<>();
 
-        Cursor cregistros = db.rawQuery("select nombre, radiacion, consumo, mes_1, mes_2," +
-                "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles" +
+        Cursor cregistros = db.rawQuery("select nombre, latitud, longitud, radiacion, consumo," +
+                " mes_1, mes_2,mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles" +
                 " from sitios",null);
 
         if(cregistros.moveToFirst()){
             do{
                 Sitio sit = new Sitio();
                 sit.setNombre(cregistros.getString(0));
-                sit.setRadiacion(cregistros.getDouble(1));
-                sit.setMes_1(cregistros.getDouble(3));
-                sit.setMes_2(cregistros.getDouble(4));
-                sit.setMes_3(cregistros.getDouble(5));
-                sit.setMes_4(cregistros.getDouble(6));
-                sit.setMes_5(cregistros.getDouble(7));
-                sit.setMes_6(cregistros.getDouble(8));
-                sit.setP_panel(cregistros.getDouble(9));
-                sit.setN_panel(cregistros.getDouble(10));
+                sit.setLatitud(cregistros.getDouble(1));
+                sit.setLongitud(cregistros.getDouble(2));
+                sit.setRadiacion(cregistros.getDouble(4));
+                sit.setMes_1(cregistros.getDouble(5));
+                sit.setMes_2(cregistros.getDouble(6));
+                sit.setMes_3(cregistros.getDouble(7));
+                sit.setMes_4(cregistros.getDouble(8));
+                sit.setMes_5(cregistros.getDouble(9));
+                sit.setMes_6(cregistros.getDouble(10));
+                sit.setP_panel(cregistros.getDouble(11));
+                sit.setN_panel(cregistros.getDouble(12));
 
                 sitios.add(sit);
 
