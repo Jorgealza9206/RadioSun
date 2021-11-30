@@ -4,14 +4,32 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.radiosun.adapters.AdapterSitios;
+import com.example.radiosun.clases.dao.SitioDAO;
+import com.example.radiosun.modelos.Sitio;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class Sitios extends AppCompatActivity {
+
+    //Variables globales para el Recycler View
+    //ArrayList<String> listaDatos;
+    ArrayList<Sitio> listaSitios;
+    RecyclerView sitios_recycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +39,35 @@ public class Sitios extends AppCompatActivity {
         //Inicializando el Toolbar del activity map
         Toolbar sitios_toolbar = (Toolbar) findViewById(R.id.sitios_toolbar);
         setSupportActionBar(sitios_toolbar);
+
+
+
+
+        actualizarRecycler();
+
+
+
+        //Agregar boton para añadir nuevos sitios
+        FloatingActionButton BtnMapa = (FloatingActionButton) findViewById(R.id.sitios_btnagregarmapa);
+
+
+        //Acción del boto Tus Sitios dentro del Activity Home
+        BtnMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goMap = new Intent(Sitios.this, Map.class);
+                startActivity(goMap);
+            }
+        });
+
+        Button BtnBuscar = (Button) findViewById(R.id.sitios_btnbuscar);
+
+        BtnBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                actualizarRecycler();
+            }
+        });
 
     }
 
@@ -75,6 +122,33 @@ public class Sitios extends AppCompatActivity {
         return true;
 
     }
+
+    //Recycler View
+    private void actualizarRecycler(){
+        //vincular proyecto
+        EditText txtBusqueda = (EditText) findViewById(R.id.sitios_txtbusqueda);
+
+        //asignando recycler view
+        sitios_recycler = (RecyclerView) findViewById(R.id.sitios_recycler);
+        sitios_recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
+        //sitios_recycler.setLayoutManager(new GridLayoutManager(this, 1));
+        //listaDatos = new ArrayList<String>();
+        SitioDAO sidao = new SitioDAO(this);
+        AdapterSitios adaptador = new AdapterSitios(sidao.listar(txtBusqueda.getText().toString()));
+
+
+        listaSitios = new ArrayList<>();
+
+        //Rellenando la lista lista de datos
+
+        /* LLenado de prueba
+        for (int i = 0; i<=50; i++ ){
+            listaDatos.add("Dato #" + i + " ");
+
+        }*/
+        sitios_recycler.setAdapter(adaptador);
+    }
+
 
 
 

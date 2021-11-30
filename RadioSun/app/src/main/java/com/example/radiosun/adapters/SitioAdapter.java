@@ -54,9 +54,9 @@ public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRe
        public ViewHolderRegistro(@NonNull View itemView){
            super(itemView);
            //int id;
-           this.txtNombre= itemView.findViewById(R.id.sitio_item_nombre);
+           this.txtNombre= itemView.findViewById(R.id.sitio_idnombre);
             //TextView txtCoordenadas;
-           this.txtRadiacion= itemView.findViewById(R.id.sitio_item_radiacion);
+           this.txtRadiacion= itemView.findViewById(R.id.sitio_radiacion);
        }
     }
 }

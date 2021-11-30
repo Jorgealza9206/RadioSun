@@ -65,6 +65,13 @@
         RadioSun se encuentra en fase de desarrollo y pruebas, cualquier incoveniente favor informar a los desarrolladores.
 
         </string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // Strings del activity Sitio
+
+    <string name="btnbuscar">Buscar</string>
+    <string name="hintbuscar">Consultar</string>
+
 
 </resources>

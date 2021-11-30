@@ -2,11 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/COLOR_3"
-    android:orientation="vertical"
     tools:context=".Login">
 
     <androidx.appcompat.widget.Toolbar
@@ -22,44 +20,48 @@
         app:title="Mapa de sitios"
         app:titleTextColor="@color/COLOR_4" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
-        android:name="com.example.radiosun.MapsFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_toolbar_2" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/map_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="24dp"
         android:background="@color/COLOR_4"
         android:backgroundTint="@color/COLOR_2"
         android:clickable="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_add"
-        app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/map_remove"
+        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapaview"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/mapa_fragment_mapaview"
+        app:layout_constraintTop_toTopOf="@+id/mapa_fragment_mapaview"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_add" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/map_remove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="52dp"
         android:background="@color/COLOR_4"
         android:backgroundTint="@color/COLOR_2"
         android:clickable="true"
-        android:src="@drawable/ic_gps"
-        app:layout_constraintBottom_toTopOf="@+id/map_add"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/mapa_fragment_mapaview"
+        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapaview"
         app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/mapa_fragment_mapaview"
+        app:srcCompat="@drawable/ic_gps" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapa_fragment_mapaview"
+        android:name="com.example.radiosun.MapaFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_toolbar_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

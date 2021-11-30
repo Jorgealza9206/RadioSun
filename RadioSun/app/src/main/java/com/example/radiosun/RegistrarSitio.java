@@ -26,7 +26,7 @@ public class RegistrarSitio extends AppCompatActivity {
         setContentView(R.layout.activity_registrarsitio);
 
         EditText txtNombre = (EditText) findViewById(R.id.registro_nombresitio);
-        TextView txtCoordenadas = (TextView) findViewById(R.id.registrositio_coordenadas);
+        //TextView txtCoordenadas = (TextView) findViewById(R.id.registrositio_coordenadas);
         EditText txtRadiacion = (EditText) findViewById(R.id.registrositio_radiacion);
         //RadioGroup rgConsumo = (RadioGroup) findViewById(id.registro_sitio_radioGroup);
         //RadioButton rbInterconectado = (RadioButton) findViewById(id.registro_sitio_radioButtonInterconectado);
@@ -131,7 +131,7 @@ public class RegistrarSitio extends AppCompatActivity {
 
         id = stdao.Insertar(sit);
 
-        ArrayList<Sitio> sitios= stdao.listar();
+        ArrayList<Sitio> sitios= stdao.listar(null);
 
         return id;
     }

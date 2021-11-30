@@ -1,6 +1,8 @@
 package com.example.radiosun.modelos;
 
 public class Sitio {
+
+    //Atributos del Sitio
     private int id;
     private String nombre;
     private double radiacion;
@@ -13,8 +15,6 @@ public class Sitio {
     private double mes_6;
     private double p_panel;
     private double n_panel;
-    private double latitud;
-    private double longitud;
 
     public Sitio() {
     }
@@ -111,22 +111,6 @@ public class Sitio {
 
     public void setN_panel(double n_panel) {
         this.n_panel = n_panel;
-    }
-
-    public double getLatitud() {
-        return latitud;
-    }
-
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
-    }
-
-    public double getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
     }
 
     //Metodo del objeto Sitio

@@ -9,13 +9,56 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0a56d8-ee0e-401f-b727-0b37fae2eb04" name="Default Changelist" comment="" />
+    <list default="true" id="af0a56d8-ee0e-401f-b727-0b37fae2eb04" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_gps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_gps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_gps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_gps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_gps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/debug/res/values/google_maps_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/MapsActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/MapsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/RegistrarSitio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/RegistrarSitio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/Sitios.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/Sitios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/adapters/SitioAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/adapters/SitioAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/clases/SQLiteConex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/clases/SQLiteConex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/clases/dao/SitioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/clases/dao/SitioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/modelos/Sitio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/java/com/example/radiosun/modelos/Sitio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/drawable-anydpi/ic_action_name.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/drawable-hdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/drawable-mdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/drawable-xhdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/drawable-xxhdpi/ic_action_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_map.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_maps.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_registrarsitio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_registrarsitio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_sitios.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/activity_sitios.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/fragment_maps.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/sitio_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/layout/sitio_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RadioSun/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\freir\.android\avd\Nexus_4_API_24.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\usuario\.android\avd\Moto_One_Action_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -29,6 +72,9 @@
         <option value="layoutResourceFile" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -47,7 +93,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RadioSunV19-main/RadioSun" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="memory.settings.postsync.last.time.stamp" value="1638055812697" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -166,5 +212,16 @@
       <updated>1638055775950</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
