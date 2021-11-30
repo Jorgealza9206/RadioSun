@@ -72,6 +72,7 @@
 
     <string name="btnbuscar">Buscar</string>
     <string name="hintbuscar">Consultar</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>

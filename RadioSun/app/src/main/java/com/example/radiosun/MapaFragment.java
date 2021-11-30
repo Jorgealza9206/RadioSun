@@ -33,7 +33,17 @@ public class MapaFragment extends Fragment {
         public void onMapReady(GoogleMap googleMap) {
             LatLng bogota = new LatLng(4.6396246983068865, -74.08485188328156);
             googleMap.addMarker(new MarkerOptions().position(bogota).title("Marker in Bogota"));
+            googleMap.setMinZoomPreference(5);
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));
+            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(@NonNull LatLng latLng) {
+                    LatLng coordenada = new LatLng(latLng.latitude, latLng.longitude);
+                    googleMap.addMarker(new MarkerOptions().position(coordenada).title("Posicion"));
+                    googleMap.setMinZoomPreference(12);
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(coordenada));
+                }
+            });
         }
     };
 
@@ -53,5 +63,7 @@ public class MapaFragment extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+
+
     }
 }

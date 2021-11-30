@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Map extends AppCompatActivity {
 
@@ -23,6 +27,15 @@ public class Map extends AppCompatActivity {
         Toolbar map_toolbar = (Toolbar) findViewById(R.id.map_toolbar_2);
         setSupportActionBar(map_toolbar);
 
+        FloatingActionButton add_user = (FloatingActionButton) findViewById(R.id.map_add_site);
+
+        add_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RegistrarSitioFragment.newInstance("","").show(getSupportFragmentManager(), null);
+
+            }
+        });
 
     }
 
