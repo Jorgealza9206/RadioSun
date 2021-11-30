@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">RadioSun</string>
+
+    // Mensajes de alertas de dialogo
+    <string name="alerta_error">ERROR</string>
+    <string name="alerta_exito">Datos ingresados correctamente</string>
+
+    // String del login
+
+
+    <string name="textView_home">Bienvenido a RadioSun</string>
+    <string name="login_txvEmail">Ingrese su Correo</string>
+    <string name="login_txvPassword">Ingrese su Contraseña</string>
+    <string name="btn_ingresar_login">Ingresar</string>
+    <string name="btn_registrarse_login">Registrarse</string>
+    <string name="btn_registrarse_login_message">No ingreso la contraseña o el nombre de usuario</string>
+    <string name="btn_registrarse_login_message_exito">Ingresado con Éxito</string>
+
+    //String del Home
+
+    <string name="username_home">Nombre del Usuario</string>
+    <string name="txv_missitios">Mis Sitios</string>
+    <string name="txv_map">Mapa</string>
+
+    //Strings de registro
+
+    <string name="registro_txvnombre">Ingrese su nombre</string>
+    <string name="registro_txvapellido">Ingrese su apellido</string>
+    <string name="registro_txvemail">Ingrese su correo</string>
+    <string name="registro_txvcontrasena">Ingresar contraseña</string>
+    <string name="registro_txvcontrasena_repetir">Repetir contraseña</string>
+
+    // Opciones del main menu
+
+    <string name="main_menu_opcion1">Tus sitios</string>
+    <string name="main_menu_opcion2">Mapa</string>
+    <string name="main_menu_opcion3">Configuración</string>
+    <string name="main_menu_opcion4">Acerca de</string>
+
+    //Strings de registro sitio
+
+    <string name="registrositio_txvnombre">Ingrese nombre de sitio</string>
+    <string name="registrositio_btnconsumo">Agregar Consumo</string>
+    <string-array name="potencia_paneles">
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>100</item>
+        <item>150</item>
+        <item>170</item>
+        <item>180</item>
+        <item>200</item>
+        <item>290</item>
+        <item>445</item>
+        <item>460</item>
+    </string-array>
+
+    //Strings de registro sitio
+
+    <string name="acercade_descipcion">Esta apliación esta desarrollada por
+        Jorge Alza
+        Freire Palomino
+        Mauro Enciso
+
+        RadioSun se encuentra en fase de desarrollo y pruebas, cualquier incoveniente favor informar a los desarrolladores.
+
+        </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // Strings del activity Sitio
+
+    <string name="btnbuscar">Buscar</string>
+    <string name="hintbuscar">Consultar</string>
+
+
+</resources>
