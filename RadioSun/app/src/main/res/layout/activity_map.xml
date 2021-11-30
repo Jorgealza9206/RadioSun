@@ -21,47 +21,43 @@
         app:titleTextColor="@color/COLOR_4" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/map_add"
+        android:id="@+id/map_gps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="328dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/COLOR_4"
         android:backgroundTint="@color/COLOR_2"
         android:clickable="true"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/map_remove"
-        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapaview"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/mapa_fragment_mapaview"
-        app:layout_constraintTop_toTopOf="@+id/mapa_fragment_mapaview"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_add" />
+        app:layout_constraintBottom_toTopOf="@+id/map_add_site"
+        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapa_gps"
+        app:srcCompat="@drawable/ic_gps" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/map_remove"
+        android:id="@+id/map_add_site"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/COLOR_4"
         android:backgroundTint="@color/COLOR_2"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/mapa_fragment_mapaview"
-        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapaview"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="@+id/mapa_fragment_mapaview"
-        app:srcCompat="@drawable/ic_gps" />
+        app:layout_constraintBottom_toBottomOf="@+id/mapa_fragment_mapa_gps"
+        app:layout_constraintEnd_toEndOf="@+id/mapa_fragment_mapa_gps"
+        app:srcCompat="@drawable/ic_add" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mapa_fragment_mapaview"
+        android:id="@+id/mapa_fragment_mapa_gps"
         android:name="com.example.radiosun.MapaFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_toolbar_2" />
+        app:layout_constraintTop_toBottomOf="@+id/map_toolbar_2"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
