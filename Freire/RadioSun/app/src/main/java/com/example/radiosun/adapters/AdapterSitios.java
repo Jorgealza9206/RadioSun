@@ -62,7 +62,7 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
 
         //TextView dato;
         int id;
-        TextView txv_nombre, txv_radiación, txv_latitud, txv_longitud;
+        TextView txv_nombre, txv_radiación, txv_latitud, txv_longitud, txv_paneles;
 
         public ViewHolderDatos(@NonNull View itemView) {
             super(itemView);
@@ -73,6 +73,8 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
 
             txv_latitud = (TextView) itemView.findViewById(R.id.sitio_latitud);
             txv_longitud = (TextView) itemView.findViewById(R.id.sitio_longitud);
+
+            txv_paneles = (TextView) itemView.findViewById(R.id.sitio_paneles);
 
             ImageButton btneditar = (ImageButton) itemView.findViewById(R.id.sitio_btneditar);
             ImageButton btneliminar = (ImageButton) itemView.findViewById(R.id.sitio_btneliminar);
@@ -128,6 +130,8 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
             }else{
                 txv_longitud.setText(String.valueOf(Math.round(sitio.getLongitud()*-10000.0)/10000.0) + " W");
             }
+
+            txv_paneles.setText(String.valueOf(sitio.getN_panel()) + " Paneles");
 
 
             id = sitio.getId();

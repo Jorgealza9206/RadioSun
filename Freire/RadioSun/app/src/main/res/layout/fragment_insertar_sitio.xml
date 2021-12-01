@@ -24,8 +24,35 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/COLOR_2"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/insertarsitio_btncancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/COLOR_RED"
+                android:padding="8dp"
+                android:text="@string/btncancelar" />
+
+            <Button
+                android:id="@+id/insertarsitio_btnagregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/COLOR_GREEN"
+                android:padding="8dp"
+                android:text="@string/btnagregar"
+                tools:layout_conversion_absoluteHeight="77dp"
+                tools:layout_conversion_absoluteWidth="303dp"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="691dp" />
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -56,6 +83,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:hint="Latitud"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     tools:layout_conversion_absoluteHeight="44dp"
                     tools:layout_conversion_absoluteWidth="320dp"
                     tools:layout_editor_absoluteX="46dp"
@@ -65,7 +94,9 @@
                     android:id="@+id/insertarsitio_coordenada_longitud"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Longitud" />
+                    android:hint="Longitud"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/registrositio_radiacion"
@@ -201,33 +232,6 @@
                     tools:layout_conversion_absoluteWidth="411dp"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="651dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:id="@+id/insertarsitio_btncancelar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/COLOR_RED"
-                        android:padding="8dp"
-                        android:text="@string/btncancelar" />
-
-                    <Button
-                        android:id="@+id/insertarsitio_btnagregar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/COLOR_GREEN"
-                        android:padding="8dp"
-                        android:text="@string/btnagregar"
-                        tools:layout_conversion_absoluteHeight="77dp"
-                        tools:layout_conversion_absoluteWidth="303dp"
-                        tools:layout_editor_absoluteX="54dp"
-                        tools:layout_editor_absoluteY="691dp" />
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/registrositio_numeropaneles"

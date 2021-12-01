@@ -2139,6 +2139,7 @@ id sitio_idnombre
 id sitio_image
 id sitio_latitud
 id sitio_longitud
+id sitio_paneles
 id sitio_radiacion
 id sitios_btnagregarmapa
 id sitios_btnbuscar
