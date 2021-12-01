@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\freir\.gradle\caches\transforms-3\b51774edc34adde96528cd3b4520cdcd\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.material:material:1.2.0-alpha01] C:\Users\freir\.gradle\caches\transforms-3\83a75cca96ee0c3b25e94656427e4c37\transformed\material-1.2.0-alpha01\AndroidManifest.xml:17:1-24:12
@@ -70,25 +70,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\freir\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\freir\.gradle\caches\transforms-3\5614c20cb9060278f11623b2ed4b3fbe\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\freir\.gradle\caches\transforms-3\e48666afaef4229291498f06f5b7dd91\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\freir\.gradle\caches\transforms-3\f33bcb2f5c49a496470aa54ba8b02aa6\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:10:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\freir\.gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
@@ -104,13 +104,13 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] C:\Users\freir\.gradle\caches\transforms-3\ab37c910729dabc27333e06e1adeee51\transformed\jetified-play-services-measurement-sdk-api-20.0.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] C:\Users\freir\.gradle\caches\transforms-3\ab37c910729dabc27333e06e1adeee51\transformed\jetified-play-services-measurement-sdk-api-20.0.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:11:5-81
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:11:22-78
 application
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:14:5-62:19
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:14:5-62:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\freir\.gradle\caches\transforms-3\b51774edc34adde96528cd3b4520cdcd\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\freir\.gradle\caches\transforms-3\b51774edc34adde96528cd3b4520cdcd\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:36:5-42:19
@@ -160,81 +160,81 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\fr
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\freir\.gradle\caches\transforms-3\9e664a381fd5e1e79037a44116b4e423\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:18:9-48
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:18:9-48
 	android:icon
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:20:9-46
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:20:9-46
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:30:9-32:55
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:30:9-32:55
 	android:value
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:32:13-52
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:32:13-52
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:31:13-58
 activity#com.example.radiosun.Configuracion
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:35:13-42
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:35:13-42
 activity#com.example.radiosun.Acerca_de
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:37:9-39:40
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:38:13-38
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:38:13-38
 activity#com.example.radiosun.Sitios
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:40:9-42:40
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:41:13-35
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:41:13-35
 activity#com.example.radiosun.RegistrarSitio
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:43:9-45:40
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:44:13-43
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:44:13-43
 activity#com.example.radiosun.Map
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:46:9-48:40
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:46:9-48:40
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:48:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:47:13-32
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:47:13-32
 activity#com.example.radiosun.Login
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:49:9-57:20
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:49:9-57:20
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:51:13-36
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:50:13-34
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:50:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:52:13-56:29
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:52:13-56:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:53:17-69
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:53:17-69
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:53:25-66
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:53:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:55:17-77
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:55:17-77
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:55:27-74
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:55:27-74
 activity#com.example.radiosun.Home
-ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:58:9-61:51
+ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:58:9-61:51
 	android:parentActivityName
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:61:13-48
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:61:13-48
 	android:exported
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:60:13-37
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml:59:13-33
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml:59:13-33
 uses-sdk
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\freir\.gradle\caches\transforms-3\b51774edc34adde96528cd3b4520cdcd\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\freir\.gradle\caches\transforms-3\b51774edc34adde96528cd3b4520cdcd\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:20:5-44
@@ -367,16 +367,16 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\freir\.gradle\cache
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\freir\.gradle\caches\transforms-3\e48666afaef4229291498f06f5b7dd91\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\freir\.gradle\caches\transforms-3\f33bcb2f5c49a496470aa54ba8b02aa6\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\freir\.gradle\caches\transforms-3\f33bcb2f5c49a496470aa54ba8b02aa6\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\freir\Documents\AndroidStudio\RadioSun (3)\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\freir\Documents\GitHub\RadioSunV19\Freire\RadioSun\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:18.0.0] C:\Users\freir\.gradle\caches\transforms-3\ff3b2ac0f81edf7ccf8c3eeca5eabaaf\transformed\jetified-play-services-maps-18.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\freir\.gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79

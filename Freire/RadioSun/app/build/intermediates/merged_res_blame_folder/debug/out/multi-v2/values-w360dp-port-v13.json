@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\freir\\Documents\\AndroidStudio\\RadioSun (3)\\RadioSun\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+            "outputFile": "C:\\Users\\freir\\Documents\\GitHub\\RadioSunV19\\Freire\\RadioSun\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\freir\\.gradle\\caches\\transforms-3\\83a75cca96ee0c3b25e94656427e4c37\\transformed\\material-1.2.0-alpha01\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",

@@ -118,8 +118,18 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
             txv_nombre.setText(sitio.getNombre());
             txv_radiación.setText("Radiación: " + String.valueOf(sitio.getRadiacion()) + " horas");
             //Establecer Coordenadas
-            txv_latitud.setText(String.valueOf(Math.round(sitio.getLatitud()*10000.0)/10000.0) + " Latitud" );
-            txv_longitud.setText(String.valueOf(Math.round(sitio.getLongitud()*10000.0)/10000.0) + " Longitud");
+            if(sitio.getLatitud()>=0){
+                txv_latitud.setText(String.valueOf(Math.round(sitio.getLatitud()*10000.0)/10000.0) + " N" );
+            }else{
+                txv_latitud.setText(String.valueOf(Math.round(sitio.getLatitud()*-10000.0)/10000.0) + " S" );
+            }
+            if(sitio.getLongitud()>=0){
+                txv_longitud.setText(String.valueOf(Math.round(sitio.getLongitud()*10000.0)/10000.0) + " E");
+            }else{
+                txv_longitud.setText(String.valueOf(Math.round(sitio.getLongitud()*-10000.0)/10000.0) + " W");
+            }
+
+
             id = sitio.getId();
         }
     }

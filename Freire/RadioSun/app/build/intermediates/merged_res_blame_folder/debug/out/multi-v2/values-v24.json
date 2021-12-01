@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\freir\\Documents\\AndroidStudio\\RadioSun (3)\\RadioSun\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\freir\\Documents\\GitHub\\RadioSunV19\\Freire\\RadioSun\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\freir\\.gradle\\caches\\transforms-3\\6baf5fc9b880c6513445d8fe1e652e89\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
