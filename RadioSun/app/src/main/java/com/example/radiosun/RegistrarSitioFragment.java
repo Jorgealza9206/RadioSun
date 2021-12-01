@@ -106,8 +106,8 @@ public class RegistrarSitioFragment extends DialogFragment {
                if(camposVacios(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6)){
                    new Mensajes(view.getContext()).toast("Digite los datos en blanco");
                }else{
-                   long id = insertar(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,
-                           desplegable,vista);
+                   long id = insertar(txtNombre, txtLatitud, txtLongitud, txtRadiacion,txtMes1,txtMes2,txtMes3,
+                           txtMes4,txtMes5,txtMes6,desplegable,vista);
                    new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente " + String.valueOf(id));
                    //onBackPressed();
                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,
@@ -169,13 +169,15 @@ public class RegistrarSitioFragment extends DialogFragment {
 
     }
 
-    private long insertar(EditText nombres, EditText radiacion, EditText mes1, EditText mes2,
-                          EditText mes3, EditText mes4, EditText mes5, EditText mes6,
-                          EditText sp_panel, View vista){
+    private long insertar(EditText nombres, TextView latitud, TextView longitud, EditText radiacion,
+                          EditText mes1, EditText mes2, EditText mes3, EditText mes4, EditText mes5,
+                          EditText mes6, EditText sp_panel, View vista){
         long id = 0;
 
         Sitio sit = new Sitio();
         sit.setNombre(nombres.getText().toString());
+        sit.setLatitud(Double.parseDouble(latitud.getText().toString()));
+        sit.setLongitud(Double.parseDouble(longitud.getText().toString()));
         sit.setRadiacion(Double.parseDouble(radiacion.getText().toString()));
         sit.setMes_1(Double.parseDouble(mes1.getText().toString()));
         sit.setMes_2(Double.parseDouble(mes2.getText().toString()));

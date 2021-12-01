@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Coordenadas"
+                    android:text="Latitud"
                     tools:layout_conversion_absoluteHeight="44dp"
                     tools:layout_conversion_absoluteWidth="320dp"
                     tools:layout_editor_absoluteX="46dp"
@@ -53,7 +53,8 @@
                     android:id="@+id/registrositio_coordenadas_longitud"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Longitud"
+                    android:textAlignment="center" />
 
                 <EditText
                     android:id="@+id/registrositio_radiacion"
