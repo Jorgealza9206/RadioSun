@@ -16,6 +16,9 @@ public class Sitio {
     private double p_panel;
     private double n_panel;
 
+    private double latitud;
+    private double longitud;
+
     public Sitio() {
     }
 
@@ -43,7 +46,9 @@ public class Sitio {
         this.radiacion = radiacion;
     }
 
-
+    public boolean getConsumo() {
+        return consumo;
+    }
 
     public void setConsumo(boolean consumo) {
         this.consumo = consumo;
@@ -113,10 +118,23 @@ public class Sitio {
         this.n_panel = n_panel;
     }
 
-    //Metodo del objeto Sitio
-
-    public boolean isConsumo() {
+    public boolean isConsumo(byte[] blob) {
         return consumo;
     }
 
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
 }

@@ -31,7 +31,7 @@ public class MapaFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng bogota = new LatLng(4.6396246983068865, -74.08485188328156);
+            LatLng bogota = new LatLng(4, -72);
             googleMap.addMarker(new MarkerOptions().position(bogota).title("Marker in Bogota"));
             googleMap.setMinZoomPreference(5);
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));

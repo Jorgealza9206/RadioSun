@@ -37,7 +37,7 @@ public class RegistrarSitio extends AppCompatActivity {
         EditText txtMes4 = (EditText) findViewById(R.id.registro_sitio_txvMes4);
         EditText txtMes5 = (EditText) findViewById(R.id.registro_sitio_txvMes5);
         EditText txtMes6 = (EditText) findViewById(R.id.registro_sitio_txvMes6);
-        Button btnInsertar = (Button) findViewById(id.registrositio_btnconsumo);
+        Button btnInsertar = (Button) findViewById(id.insertarsitio_btnagregar);
         TextView txtPaneles = (TextView) findViewById(id.registrositio_Respuesta);
         Spinner desplegable = (Spinner) findViewById(id.registro_sitioDespegable);
 
@@ -129,7 +129,7 @@ public class RegistrarSitio extends AppCompatActivity {
 
         SitioDAO stdao = new SitioDAO(this);
 
-        id = stdao.Insertar(sit);
+        id = stdao.insertar(sit);
 
         ArrayList<Sitio> sitios= stdao.listar(null);
 

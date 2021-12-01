@@ -8,13 +8,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.radiosun.clases.Mensajes;
+import com.example.radiosun.clases.dao.SitioDAO;
+import com.example.radiosun.modelos.Sitio;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
 
 public class MapaFragment extends Fragment {
 
@@ -31,9 +39,22 @@ public class MapaFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng sydney = new LatLng(-34, 151);
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+            LatLng bogota = new LatLng(4, -72);
+            googleMap.addMarker(new MarkerOptions().position(bogota).title("Marcador en Bogota 4/72"));
+            googleMap.setMinZoomPreference(5);
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));
+            ((Map) getActivity()).actualizarCoordenadas(bogota.latitude,bogota.longitude);
+            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(@NonNull LatLng latLng) {
+                    googleMap.clear();
+                    LatLng coordenada = new LatLng(latLng.latitude, latLng.longitude);
+                    googleMap.addMarker(new MarkerOptions().position(coordenada).title("Nueva Posicion"));
+                    googleMap.setMinZoomPreference(5);
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(coordenada));
+                    ((Map) getActivity()).actualizarCoordenadas(latLng.latitude, latLng.longitude);
+                }
+            });
         }
     };
 
@@ -53,5 +74,7 @@ public class MapaFragment extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+
+
     }
 }

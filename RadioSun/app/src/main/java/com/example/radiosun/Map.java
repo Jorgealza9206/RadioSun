@@ -35,6 +35,7 @@ public class Map extends AppCompatActivity {
         add_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 RegistrarSitioFragment.newInstance(latitud,longitud).show(getSupportFragmentManager(), null);
 
             }

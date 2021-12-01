@@ -999,6 +999,8 @@ color COLOR_1
 color COLOR_2
 color COLOR_3
 color COLOR_4
+color COLOR_GREEN
+color COLOR_RED
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1692,11 +1694,9 @@ drawable design_snackbar_background
 drawable editbutton
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable ic_add
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
-drawable ic_gps
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1746,6 +1746,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id InsertarSitio_txvTitulo
 id META
 id NO_DEBUG
 id SHIFT
@@ -1972,6 +1973,11 @@ id imageView
 id immediateStop
 id included
 id info
+id insertarsitio_barrasuperior
+id insertarsitio_btnagregar
+id insertarsitio_btncancelar
+id insertarsitio_coordenada_latitude
+id insertarsitio_coordenada_longitud
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -2087,8 +2093,6 @@ id registro_sitio_txvMes4
 id registro_sitio_txvMes5
 id registro_sitio_txvMes6
 id registrositio_Respuesta
-id registrositio_btnconsumo
-id registrositio_coordenadas
 id registrositio_numeropaneles
 id registrositio_radiacion
 id registrousuario_toolbar
@@ -2131,6 +2135,8 @@ id sitio_btneditar
 id sitio_btneliminar
 id sitio_idnombre
 id sitio_image
+id sitio_latitud
+id sitio_longitud
 id sitio_radiacion
 id sitios_btnagregarmapa
 id sitios_btnbuscar
@@ -2324,8 +2330,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_insertar_sitio
 layout fragment_mapa
-layout fragment_registrar_sitio
 layout lista_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2433,7 +2439,9 @@ string btn_ingresar_login
 string btn_registrarse_login
 string btn_registrarse_login_message
 string btn_registrarse_login_message_exito
+string btnagregar
 string btnbuscar
+string btncancelar
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern

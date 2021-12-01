@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,7 +13,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.radiosun.dialogos.InsertarSitioFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Map extends AppCompatActivity {
+
+    private double latitud;
+    private double longitud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +30,43 @@ public class Map extends AppCompatActivity {
         Toolbar map_toolbar = (Toolbar) findViewById(R.id.map_toolbar_2);
         setSupportActionBar(map_toolbar);
 
+        //Agregar boton para añadir nuevos sitios
+        FloatingActionButton BtnMapaAdd = (FloatingActionButton) findViewById(R.id.map_add);
+        //Acción del boto Tus Sitios dentro del Activity Home
+        BtnMapaAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent goMap = new Intent(Map.this,Sitios.class);
+                startActivity(goMap);*/
+                InsertarSitioFragment.newInstance(latitud,longitud).show(getSupportFragmentManager(), null);
+
+                //InsertarSitioFragment dialogoInsertarSitioFragment = new InsertarSitioFragment();
+
+                //dialogoInsertarSitioFragment.show(getSupportFragmentManager(),"DialogoInsertarSitio");
+
+            }
+        });
+
+        //Agregar boton para añadir nuevos sitios
+        FloatingActionButton BtnMapaRemove = (FloatingActionButton) findViewById(R.id.map_remove);
+        //Acción del boto Tus Sitios dentro del Activity Home
+        BtnMapaRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(Map.this,"Boton Eliminar marcardor",Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+
+
+
 
     }
+
+
 
     // Comportamiento del action Bar del menu map
     @Override
@@ -75,36 +117,14 @@ public class Map extends AppCompatActivity {
         }
 
 
-        /*
-        // Configurando la acción de cada uno de los items del menu_map
-        if(id==R.id.opcion1){
-            Toast.makeText(this,R.string.main_menu_opcion3,Toast.LENGTH_LONG).show();
-        }else if(id==R.id.opcion2){
-            Toast.makeText(this,R.string.main_menu_opcion3,Toast.LENGTH_LONG).show();
-        }else if(id==R.id.opcion3){
-            Toast.makeText(this,R.string.main_menu_opcion3,Toast.LENGTH_LONG).show();
-        }else if(id==R.id.opcion4) {
-            AlertDialog.Builder miDialogo = new AlertDialog.Builder(Map.this);
-            miDialogo.setTitle("Nuevo Sitio");
-            miDialogo.setMessage("Ingrese consumo");
-            miDialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent goHome = new Intent(Map.this, Home.class);
-                    startActivity(goHome);
-                }
-            });
-            miDialogo.show();
-        }else{
-            Toast.makeText(this,R.string.main_menu_opcion4,Toast.LENGTH_LONG).show();
-        }
-        */
-
-
         return true;
 
     }
 
-
+    public void actualizarCoordenadas(double lat, double lon)
+    {
+        this.latitud = lat;
+        this.longitud = lon;
+    }
 
 }

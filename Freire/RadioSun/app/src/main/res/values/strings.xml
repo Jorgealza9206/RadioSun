@@ -71,7 +71,11 @@
     // Strings del activity Sitio
 
     <string name="btnbuscar">Buscar</string>
+
     <string name="hintbuscar">Consultar</string>
 
+
+    <string name="btnagregar">Agregar</string>
+    <string name="btncancelar">Cancelar</string>
 
 </resources>

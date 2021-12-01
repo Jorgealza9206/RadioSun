@@ -14,16 +14,16 @@ public class SQLiteConex extends SQLiteOpenHelper
     public static final  String nombredb = "Radiosun.db";
 
     public  SQLiteConex(@Nullable Context c){
-        super(c, nombredb,null,1);
-        this.context = c;
+        super(c, nombredb,null,3);
+
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE sitios"+
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+        db.execSQL("CREATE TABLE sitios "+
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "nombre TEXT NOT NULL," +
                 "radiacion REAL NOT NULL," +
-                "consumo BLOB NOT NULL," +
+                "consumo BLOB," +
                 "mes_1 REAL NOT NULL," +
                 "mes_2 REAL NOT NULL," +
                 "mes_3 REAL NOT NULL," +
@@ -31,7 +31,9 @@ public class SQLiteConex extends SQLiteOpenHelper
                 "mes_5 REAL NOT NULL," +
                 "mes_6 REAL NOT NULL," +
                 "potencia_del_panel REAL NOT NULL," +
-                "numero_de_paneles REAL NOT NULL)");
+                "numero_de_paneles REAL NOT NULL," +
+                "latitud REAL NOT NULL," +
+                "longitud REAL NOT NULL)");
     }
 
     @Override

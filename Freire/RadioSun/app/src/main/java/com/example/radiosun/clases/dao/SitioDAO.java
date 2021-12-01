@@ -22,7 +22,7 @@ public class SitioDAO extends SQLiteConex {
         this.context = c;
     }
 
-    public long Insertar(Sitio sit){
+    public long insertar(Sitio sit){
 
         long id = 0;
 
@@ -30,10 +30,12 @@ public class SitioDAO extends SQLiteConex {
             SQLiteConex dbc = new SQLiteConex(this.context);
             SQLiteDatabase db = dbc.getWritableDatabase();
 
-            ContentValues valores= new ContentValues();
+            ContentValues valores = new ContentValues();
+
+
             valores.put("nombre",sit.getNombre());
             valores.put("radiacion",sit.getRadiacion());
-            valores.put("consumo",sit.isConsumo());
+            valores.put("consumo",sit.getConsumo());
             valores.put("mes_1",sit.getMes_1());
             valores.put("mes_2",sit.getMes_2());
             valores.put("mes_3",sit.getMes_3());
@@ -42,6 +44,8 @@ public class SitioDAO extends SQLiteConex {
             valores.put("mes_6",sit.getMes_6());
             valores.put("potencia_del_panel ",sit.getP_panel());
             valores.put("numero_de_paneles",sit.getN_panel());
+            valores.put("latitud",sit.getLatitud());
+            valores.put("longitud",sit.getLongitud());
 
             id = db.insert("sitios", "null", valores);
         }catch(Exception ex){
@@ -58,8 +62,8 @@ public class SitioDAO extends SQLiteConex {
         SQLiteConex dbc = new SQLiteConex(this.context);
         SQLiteDatabase db = dbc.getWritableDatabase();
 
-        String consultaSql = "select nombre, radiacion, consumo, mes_1, mes_2," +
-                "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles" +
+        String consultaSql = "select id,nombre, radiacion, consumo, mes_1, mes_2," +
+                "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles,latitud,longitud " +
                 " from sitios";
 
 
@@ -75,16 +79,20 @@ public class SitioDAO extends SQLiteConex {
         if(cregistros.moveToFirst()){
             do{
                 Sitio sit = new Sitio();
-                sit.setNombre(cregistros.getString(0));
-                sit.setRadiacion(cregistros.getDouble(1));
-                sit.setMes_1(cregistros.getDouble(3));
-                sit.setMes_2(cregistros.getDouble(4));
-                sit.setMes_3(cregistros.getDouble(5));
-                sit.setMes_4(cregistros.getDouble(6));
-                sit.setMes_5(cregistros.getDouble(7));
-                sit.setMes_6(cregistros.getDouble(8));
-                sit.setP_panel(cregistros.getDouble(9));
-                sit.setN_panel(cregistros.getDouble(10));
+                sit.setId(cregistros.getInt(0));
+                sit.setNombre(cregistros.getString(1));
+                sit.setRadiacion(cregistros.getDouble(2));
+                //sit.isConsumo(cregistros.getBlob(3));
+                sit.setMes_1(cregistros.getDouble(4));
+                sit.setMes_2(cregistros.getDouble(5));
+                sit.setMes_3(cregistros.getDouble(6));
+                sit.setMes_4(cregistros.getDouble(7));
+                sit.setMes_5(cregistros.getDouble(8));
+                sit.setMes_6(cregistros.getDouble(9));
+                sit.setP_panel(cregistros.getDouble(10));
+                sit.setN_panel(cregistros.getDouble(11));
+                sit.setLatitud(cregistros.getDouble(12));
+                sit.setLongitud(cregistros.getDouble(13));
 
                 sitios.add(sit);
 
@@ -97,26 +105,70 @@ public class SitioDAO extends SQLiteConex {
         return sitios;
     }
 
- /*   public boolean editar(Sitio sit){
-
-        boolean editado = false;
+    public boolean eliminar(long id)
+    {
+        boolean eliminado = false;
 
         SQLiteConex conexion = new SQLiteConex(this.context);
         SQLiteDatabase db = conexion.getWritableDatabase();
 
         try
         {
-            db.execSQL(
-                    ""
-            );
-            editado = true;
+          db.execSQL("DELETE FROM sitios " +
+                  "WHERE id = '" + String.valueOf(id) + "'");
+          eliminado = true;
         }
-        catch (Exception ex)
+        catch (Exception ex){
+
+        }
+
+        return eliminado;
+    }
+
+    public Sitio getSitio(long id){
+
+        Sitio sit = null;
+
+        SQLiteConex conexion = new SQLiteConex(this.context);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+
+        String consultaSql = "select nombre, radiacion, consumo, mes_1, mes_2," +
+                "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles,latitud,longitud" +
+                " from sitios WHERE id ='" + String.valueOf(id) + "'" ;
+
+
+
+        try
         {
+            Cursor cregistros = db.rawQuery(consultaSql,null);
+
+            if(cregistros.moveToFirst()){
+
+                sit = new Sitio();
+                sit.setId(cregistros.getInt(0));
+                sit.setNombre(cregistros.getString(1));
+                sit.setRadiacion(cregistros.getDouble(2));
+                sit.setMes_1(cregistros.getDouble(3));
+                sit.setMes_2(cregistros.getDouble(4));
+                sit.setMes_3(cregistros.getDouble(5));
+                sit.setMes_4(cregistros.getDouble(6));
+                sit.setMes_5(cregistros.getDouble(7));
+                sit.setMes_6(cregistros.getDouble(8));
+                sit.setP_panel(cregistros.getDouble(9));
+                sit.setN_panel(cregistros.getDouble(10));
+                sit.setLatitud(cregistros.getDouble(11));
+                sit.setLongitud(cregistros.getDouble(12));
+
+            }
+            cregistros.close();
+
+        }
+        catch (Exception ex){
 
         }
 
+        return sit;
+    }
 
-    }*/
 
 }

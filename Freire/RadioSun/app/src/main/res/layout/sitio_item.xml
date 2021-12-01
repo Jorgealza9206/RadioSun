@@ -49,6 +49,22 @@
                 android:textAlignment="viewStart"
                 android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/sitio_latitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="latitud"
+                android:paddingStart="8dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sitio_longitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="longitud"
+                android:paddingStart="8dp"
+                android:textSize="20sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
