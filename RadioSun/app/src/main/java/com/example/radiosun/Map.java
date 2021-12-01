@@ -18,6 +18,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Map extends AppCompatActivity {
 
+    private double latitud;
+    private double longitud;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,7 @@ public class Map extends AppCompatActivity {
         add_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RegistrarSitioFragment.newInstance("","").show(getSupportFragmentManager(), null);
+                RegistrarSitioFragment.newInstance(latitud,longitud).show(getSupportFragmentManager(), null);
 
             }
         });
@@ -118,6 +121,10 @@ public class Map extends AppCompatActivity {
 
     }
 
-
+public void actualizarCoordenadas(double lat, double lon)
+{
+    this.latitud = lat;
+    this.longitud = lon;
+}
 
 }

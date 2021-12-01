@@ -33,8 +33,8 @@ public class RegistrarSitioFragment extends DialogFragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private double mParam1;
+    private double mParam2;
 
     public RegistrarSitioFragment() {
         // Required empty public constructor
@@ -49,11 +49,11 @@ public class RegistrarSitioFragment extends DialogFragment {
      * @return A new instance of fragment RegistrarSitioFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RegistrarSitioFragment newInstance(String param1, String param2) {
+    public static RegistrarSitioFragment newInstance(Double param1, Double param2) {
         RegistrarSitioFragment fragment = new RegistrarSitioFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putDouble(ARG_PARAM1, param1);
+        args.putDouble(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -62,8 +62,8 @@ public class RegistrarSitioFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam1 = getArguments().getDouble(ARG_PARAM1);
+            mParam2 = getArguments().getDouble(ARG_PARAM2);
         }
     }
 
@@ -76,7 +76,8 @@ public class RegistrarSitioFragment extends DialogFragment {
         //Código copiado del Activity
 
         EditText txtNombre = (EditText) vista.findViewById(R.id.registro_nombresitio);
-        //TextView txtCoordenadas = (TextView) findViewById(R.id.registrositio_coordenadas);
+        TextView txtLatitud = (TextView) vista.findViewById(R.id.registrositio_coordenadas_latitud);
+        TextView txtLongitud = (TextView) vista.findViewById(R.id.registrositio_coordenadas_longitud);
         EditText txtRadiacion = (EditText) vista.findViewById(R.id.registrositio_radiacion);
         //RadioGroup rgConsumo = (RadioGroup) findViewById(id.registro_sitio_radioGroup);
         //RadioButton rbInterconectado = (RadioButton) findViewById(id.registro_sitio_radioButtonInterconectado);
@@ -91,6 +92,12 @@ public class RegistrarSitioFragment extends DialogFragment {
         TextView txtPaneles = (TextView) vista.findViewById(R.id.registrositio_Respuesta);
         EditText desplegable = (EditText) vista.findViewById(R.id.registro_sitioDespegable);
 
+if(getArguments()!=null)
+{
+ txtLatitud.setText(String.valueOf(mParam1));
+ txtLongitud.setText(String.valueOf(mParam2));
+
+}
 
 
         btnInsertar.setOnClickListener(new View.OnClickListener() {
