@@ -22,6 +22,8 @@ public class SQLiteConex extends SQLiteOpenHelper
         db.execSQL("CREATE TABLE sitios"+
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nombre TEXT NOT NULL," +
+                "latitud REAL NOT NULL," +
+                "longitud REAL NOT NULL," +
                 "radiacion REAL NOT NULL," +
                 "consumo BLOB NOT NULL," +
                 "mes_1 REAL NOT NULL," +

@@ -5,6 +5,8 @@ public class Sitio {
     //Atributos del Sitio
     private int id;
     private String nombre;
+    private double latitud;
+    private double longitud;
     private double radiacion;
     private boolean consumo;
     private double mes_1;
@@ -33,6 +35,22 @@ public class Sitio {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
     }
 
     public double getRadiacion() {
