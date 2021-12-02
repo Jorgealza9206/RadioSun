@@ -42,8 +42,8 @@ public class Sitio {
     }
 
     public void setLatitud(double latitud) {
-            this.latitud = latitud;
-        }
+        this.latitud = latitud;
+    }
 
     public double getLongitud() {
         return longitud;
@@ -61,7 +61,9 @@ public class Sitio {
         this.radiacion = radiacion;
     }
 
-
+    public boolean getConsumo() {
+        return consumo;
+    }
 
     public void setConsumo(boolean consumo) {
         this.consumo = consumo;
@@ -131,10 +133,7 @@ public class Sitio {
         this.n_panel = n_panel;
     }
 
-    //Metodo del objeto Sitio
-
     public boolean isConsumo() {
         return consumo;
     }
-
 }

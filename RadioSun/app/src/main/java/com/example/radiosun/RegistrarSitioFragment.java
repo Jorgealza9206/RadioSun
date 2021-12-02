@@ -92,12 +92,12 @@ public class RegistrarSitioFragment extends DialogFragment {
         TextView txtPaneles = (TextView) vista.findViewById(R.id.registrositio_Respuesta);
         EditText desplegable = (EditText) vista.findViewById(R.id.registro_sitioDespegable);
 
-        if(getArguments()!=null)
-        {
-         txtLatitud.setText(String.valueOf(mParam1));
-         txtLongitud.setText(String.valueOf(mParam2));
+if(getArguments()!=null)
+{
+ txtLatitud.setText(String.valueOf(mParam1));
+ txtLongitud.setText(String.valueOf(mParam2));
 
-        }
+}
 
 
         btnInsertar.setOnClickListener(new View.OnClickListener() {
