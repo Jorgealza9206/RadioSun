@@ -1,21 +1,32 @@
 package com.example.radiosun;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class Login extends AppCompatActivity {
 
+    private FirebaseAuth autenticacionFirebase;
+    private String email;
+    private String clave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        autenticacionFirebase = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_login);
 
         Button btn_ingresar_login = (Button) findViewById(R.id.login_btningresar);
@@ -27,9 +38,26 @@ public class Login extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goRegister = new Intent(Login.this, RegistrarSitio.class);
-                startActivity(goRegister);
+                if (validarCampos(txtEmail,txtContrasena)) {
+                    autenticacionFirebase.createUserWithEmailAndPassword(email, clave).addOnCompleteListener((Activity) v.getContext(), new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                irMenu(email);
+                            } else {
+                                verMensaje("Ocurrió un error al registrar el usuario");
+                            }
+                        }
+                    });
+
+
+                /*Intent goRegister = new Intent(Login.this, RegistrarSitio.class);
+                startActivity(goRegister);*/
+                }else{
+                    verMensaje("Diligencie todos los campos");
+                }
             }
+
         });
 
 
@@ -65,5 +93,33 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    // Validar datos
+
+    private boolean validarCampos(EditText email, EditText clave){
+
+        boolean camposDiligenciados = false;
+        this.email = email.getText().toString();
+        this.clave = clave.getText().toString();
+
+        if(!this.email.isEmpty() && !this.clave.isEmpty()){
+            camposDiligenciados = true;
+        }
+
+        return camposDiligenciados;
+    }
+
+    private void verMensaje(String cuerpo){
+        AlertDialog.Builder msj = new AlertDialog.Builder(this);
+        msj.setMessage(cuerpo);
+        msj.show();
+    }
+
+    private void irMenu(String email){
+        Intent goHome = new Intent(this, MainActivity.class);
+        goHome.putExtra("email",email);
+        startActivity(goHome);
     }
 }

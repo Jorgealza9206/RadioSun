@@ -1,5 +1,6 @@
 package com.example.radiosun;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
@@ -112,6 +113,8 @@ if(getArguments()!=null)
                    //onBackPressed();
                    txtPaneles.setText(paneles(txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6,
                            desplegable));
+                   Intent gotoSitios = new Intent(getContext(),Sitios.class);
+                   startActivity(gotoSitios);
                }
            }
        }
