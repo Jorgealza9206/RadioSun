@@ -4,18 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/COLOR_3"
+    android:backgroundTint="@color/COLOR_3"
     tools:context=".RegistrarSitioFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:id="@+id/registro_sitio_txvMes0"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="622dp"
         android:background="@color/COLOR_3"
         android:backgroundTint="@color/COLOR_3"
         android:orientation="vertical"
         tools:context=".RegistrarSitio">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/registrositio_btncancelar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:padding="8dp"
+                android:text="@string/registrositio_btncancelar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/registrositio_btnconsumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="#0ABA11"
+                android:padding="8dp"
+                android:text="@string/registrositio_btnconsumo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="77dp"
+                tools:layout_conversion_absoluteWidth="303dp"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="691dp" />
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -24,15 +64,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/registro_nombresitio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:ems="10"
                     android:hint="@string/registrositio_txvnombre"
                     android:inputType="textPersonName"
+                    android:paddingStart="8dp"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
                     tools:layout_conversion_absoluteHeight="43dp"
                     tools:layout_conversion_absoluteWidth="411dp"
                     tools:layout_editor_absoluteX="0dp"
@@ -43,7 +88,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:padding="8dp"
                     android:text="Latitud"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold"
                     tools:layout_conversion_absoluteHeight="44dp"
                     tools:layout_conversion_absoluteWidth="320dp"
                     tools:layout_editor_absoluteX="46dp"
@@ -53,16 +102,21 @@
                     android:id="@+id/registrositio_coordenadas_longitud"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="8dp"
                     android:text="Longitud"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold" />
 
                 <EditText
                     android:id="@+id/registrositio_radiacion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:gravity="center"
                     android:hint="Radiación"
                     android:inputType="number|numberDecimal"
+                    android:textSize="20sp"
                     tools:layout_conversion_absoluteHeight="51dp"
                     tools:layout_conversion_absoluteWidth="321dp"
                     tools:layout_editor_absoluteX="45dp"
@@ -70,14 +124,16 @@
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
 
                     <RadioButton
                         android:id="@+id/registro_sitio_radioButtonAutonomo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Autonomo"
-                        android:textAlignment="center"
+                        android:textAlignment="gravity"
                         tools:layout_conversion_absoluteHeight="32dp"
                         tools:layout_conversion_absoluteWidth="126dp"
                         tools:layout_editor_absoluteX="142dp"
@@ -88,7 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Interconectado"
-                        android:textAlignment="center"
+                        android:textAlignment="gravity"
                         tools:layout_conversion_absoluteHeight="32dp"
                         tools:layout_conversion_absoluteWidth="126dp"
                         tools:layout_editor_absoluteX="142dp"
@@ -178,20 +234,12 @@
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
-                <Button
-                    android:id="@+id/registrositio_btnconsumo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/registrositio_btnconsumo"
-                    tools:layout_conversion_absoluteHeight="77dp"
-                    tools:layout_conversion_absoluteWidth="303dp"
-                    tools:layout_editor_absoluteX="54dp"
-                    tools:layout_editor_absoluteY="691dp" />
-
                 <TextView
                     android:id="@+id/registrositio_numeropaneles"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:gravity="center"
                     android:text="# de Paneles"
                     android:textSize="24sp"

@@ -60,7 +60,7 @@ public class SitioDAO extends SQLiteConex {
         SQLiteConex dbc = new SQLiteConex(this.context);
         SQLiteDatabase db = dbc.getWritableDatabase();
 
-        String consultaSql = "select nombre, latitud, longitud, radiacion, consumo, mes_1, mes_2," +
+        String consultaSql = "select id,nombre, latitud, longitud, radiacion, consumo, mes_1, mes_2," +
                 "mes_3,mes_4,mes_5,mes_6,potencia_del_panel,numero_de_paneles from sitios";
 
 
@@ -76,18 +76,20 @@ public class SitioDAO extends SQLiteConex {
         if(cregistros.moveToFirst()){
             do{
                 Sitio sit = new Sitio();
-                sit.setNombre(cregistros.getString(0));
-                sit.setLatitud(cregistros.getDouble(1));
-                sit.setLongitud(cregistros.getDouble(2));
-                sit.setRadiacion(cregistros.getDouble(3));
-                sit.setMes_1(cregistros.getDouble(5));
-                sit.setMes_2(cregistros.getDouble(6));
-                sit.setMes_3(cregistros.getDouble(7));
-                sit.setMes_4(cregistros.getDouble(8));
-                sit.setMes_5(cregistros.getDouble(9));
-                sit.setMes_6(cregistros.getDouble(10));
-                sit.setP_panel(cregistros.getDouble(11));
-                sit.setN_panel(cregistros.getDouble(12));
+                sit.setId(cregistros.getInt(0));
+                sit.setNombre(cregistros.getString(1));
+                sit.setLatitud(cregistros.getDouble(2));
+                sit.setLongitud(cregistros.getDouble(3));
+                sit.setRadiacion(cregistros.getDouble(4));
+                //Aquí iría consumo
+                sit.setMes_1(cregistros.getDouble(6));
+                sit.setMes_2(cregistros.getDouble(7));
+                sit.setMes_3(cregistros.getDouble(8));
+                sit.setMes_4(cregistros.getDouble(9));
+                sit.setMes_5(cregistros.getDouble(10));
+                sit.setMes_6(cregistros.getDouble(11));
+                sit.setP_panel(cregistros.getDouble(12));
+                sit.setN_panel(cregistros.getDouble(13));
 
                 sitios.add(sit);
 
@@ -100,26 +102,24 @@ public class SitioDAO extends SQLiteConex {
         return sitios;
     }
 
- /*   public boolean editar(Sitio sit){
-
-        boolean editado = false;
+    public boolean eliminar(long id)
+    {
+        boolean eliminado = false;
 
         SQLiteConex conexion = new SQLiteConex(this.context);
         SQLiteDatabase db = conexion.getWritableDatabase();
 
         try
         {
-            db.execSQL(
-                    ""
-            );
-            editado = true;
+            db.execSQL("DELETE FROM sitios " +
+                    "WHERE id = '" + String.valueOf(id) + "'");
+            eliminado = true;
         }
-        catch (Exception ex)
-        {
+        catch (Exception ex){
 
         }
 
-
-    }*/
+        return eliminado;
+    }
 
 }

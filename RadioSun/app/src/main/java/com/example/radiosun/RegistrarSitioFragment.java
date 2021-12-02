@@ -2,18 +2,16 @@ package com.example.radiosun;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import com.example.radiosun.clases.Mensajes;
 import com.example.radiosun.clases.dao.SitioDAO;
@@ -93,12 +91,13 @@ public class RegistrarSitioFragment extends DialogFragment {
         TextView txtPaneles = (TextView) vista.findViewById(R.id.registrositio_Respuesta);
         EditText desplegable = (EditText) vista.findViewById(R.id.registro_sitioDespegable);
 
-if(getArguments()!=null)
-{
- txtLatitud.setText(String.valueOf(mParam1));
- txtLongitud.setText(String.valueOf(mParam2));
+        Button btnCancelar = (Button) vista.findViewById(R.id.registrositio_btncancelar);
 
-}
+        if(getArguments()!=null)
+        {
+         txtLatitud.setText(String.valueOf(mParam1));
+         txtLongitud.setText(String.valueOf(mParam2));
+        }
 
 
         btnInsertar.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +106,7 @@ if(getArguments()!=null)
                if(camposVacios(txtNombre,txtRadiacion,txtMes1,txtMes2,txtMes3,txtMes4,txtMes5,txtMes6)){
                    new Mensajes(view.getContext()).toast("Digite los datos en blanco");
                }else{
-                   long id = insertar(txtNombre, txtLatitud, txtLongitud, txtRadiacion,txtMes1,txtMes2,txtMes3,
+                   long id = insertar2(txtNombre, txtLatitud, txtLongitud, txtRadiacion,txtMes1,txtMes2,txtMes3,
                            txtMes4,txtMes5,txtMes6,desplegable,vista);
                    new Mensajes(view.getContext()).toast("Se ha agregado el registro correctamente " + String.valueOf(id));
                    //onBackPressed();
@@ -120,6 +119,15 @@ if(getArguments()!=null)
        }
 
 );
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+
+
 
 
 
@@ -172,7 +180,7 @@ if(getArguments()!=null)
 
     }
 
-    private long insertar(EditText nombres, TextView latitud, TextView longitud, EditText radiacion,
+    private long insertar2(EditText nombres, TextView latitud, TextView longitud, EditText radiacion,
                           EditText mes1, EditText mes2, EditText mes3, EditText mes4, EditText mes5,
                           EditText mes6, EditText sp_panel, View vista){
         long id = 0;

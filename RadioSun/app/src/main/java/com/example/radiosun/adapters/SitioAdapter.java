@@ -50,6 +50,7 @@ public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRe
 
         TextView txtNombre;
         TextView txtRadiacion;
+        TextView txtLatitud;
 
        public ViewHolderRegistro(@NonNull View itemView){
            super(itemView);
@@ -57,6 +58,7 @@ public class SitioAdapter extends RecyclerView.Adapter<SitioAdapter.ViewHolderRe
            this.txtNombre= itemView.findViewById(R.id.sitio_idnombre);
             //TextView txtCoordenadas;
            this.txtRadiacion= itemView.findViewById(R.id.sitio_radiacion);
+           this.txtLatitud = itemView.findViewById(R.id.sitio_latitud);
        }
     }
 }

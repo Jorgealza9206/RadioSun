@@ -40,7 +40,9 @@
     //Strings de registro sitio
 
     <string name="registrositio_txvnombre">Ingrese nombre de sitio</string>
-    <string name="registrositio_btnconsumo">Agregar Consumo</string>
+    <string name="registrositio_btnconsumo">Agregar</string>
+    <string name="registrositio_btncancelar">Cancelar</string>
+    <string name="registrositio_paneles"># Paneles</string>
     <string-array name="potencia_paneles">
         <item>20</item>
         <item>40</item>
