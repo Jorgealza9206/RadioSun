@@ -16,8 +16,11 @@ import androidx.fragment.app.Fragment;
 import com.example.radiosun.clases.Mensajes;
 import com.example.radiosun.clases.dao.SitioDAO;
 import com.example.radiosun.modelos.Sitio;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,8 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class RegistrarSitioFragment extends DialogFragment {
+
+    FirebaseDatabase database;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -129,8 +134,6 @@ public class RegistrarSitioFragment extends DialogFragment {
 
 
 
-
-
         return vista;
     }
 
@@ -200,12 +203,22 @@ public class RegistrarSitioFragment extends DialogFragment {
         sit.setN_panel(Double.parseDouble(paneles(radiacion, mes1, mes2, mes3, mes4, mes5,
                 mes6, sp_panel)));
 
+        //Insertar en SQLite
         SitioDAO stdao;
         stdao = new SitioDAO(vista.getContext());
 
         id = stdao.Insertar(sit);
 
         ArrayList<Sitio> sitios= stdao.listar(null);
+
+        //Insertar en Firebase Real-Time
+
+        database = FirebaseDatabase.getInstance();
+        database.getReference().child("Sitio").child(UUID.randomUUID().toString()).setValue(sit);
+
+        //Autenticación
+
+        
 
         return id;
     }
