@@ -21,6 +21,7 @@ import com.example.radiosun.adapters.AdapterSitios;
 import com.example.radiosun.clases.dao.SitioDAO;
 import com.example.radiosun.modelos.Sitio;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -111,6 +112,8 @@ public class Sitios extends AppCompatActivity {
                 Alert_CerrarSesion.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth autenticacion = FirebaseAuth.getInstance();
+                        autenticacion.signOut();
                         Intent goLogin = new Intent(Sitios.this, Login.class);
                         startActivity(goLogin);
                     }

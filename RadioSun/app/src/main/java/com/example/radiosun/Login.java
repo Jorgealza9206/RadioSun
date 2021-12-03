@@ -11,11 +11,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class Login extends AppCompatActivity {
@@ -27,18 +30,31 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         autenticacionFirebase = FirebaseAuth.getInstance();
+
+        FirebaseUser usuario = autenticacionFirebase.getCurrentUser();
+        if(usuario != null){
+            irMenu(usuario.getEmail());
+        }
+
         setContentView(R.layout.activity_login);
 
         Button btn_ingresar_login = (Button) findViewById(R.id.login_btningresar);
-        EditText txtEmail = (EditText) findViewById(R.id.login_txvEmail);
-        EditText txtContrasena = (EditText) findViewById(R.id.login_txvContrasena);
-        Button btnRegistro = (Button) findViewById(R.id.btn_registrarse_login);
+        EditText txtEmail = (EditText) findViewById(R.id.editTextTextEmail);
+        EditText txtContrasena = (EditText) findViewById(R.id.editTextTextClave);
+        Button btnRegistro = (Button) findViewById(R.id.btn_registrarse_registrarUsuario);
+        TextView restablecer = (TextView) findViewById(R.id.link_restablecerClave);
 
+        /*restablecer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restablecerClave.newInstance("mParam1","mParam2").show(getSupportFragmentManager(),null);
+            }
+        });*/
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validarCampos(txtEmail,txtContrasena)) {
+                /*if (validarCampos(txtEmail, txtContrasena)) {
                     autenticacionFirebase.createUserWithEmailAndPassword(email, clave).addOnCompleteListener((Activity) v.getContext(), new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -51,12 +67,13 @@ public class Login extends AppCompatActivity {
                     });
 
 
-                /*Intent goRegister = new Intent(Login.this, RegistrarSitio.class);
-                startActivity(goRegister);*/
+
                 }else{
                     verMensaje("Diligencie todos los campos");
+                }*/
+                Intent goRegister = new Intent(Login.this, RegistrarUsuario.class);
+                startActivity(goRegister);
                 }
-            }
 
         });
 
@@ -66,6 +83,16 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
+                if(validarCampos(txtEmail,txtContrasena)){
+                    autenticacionFirebase.signInWithEmailAndPassword(email,clave).addOnCompleteListener((Activity) view.getContext(), new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                irMenu(email);
+                            }else verMensaje("Usuario no registrado");
+                        }
+                    });
+                }else verMensaje("Ingrese sus datos");
                 // Validación de Ingreso de datos para entrar en la app.
                 /*
                 AlertDialog.Builder message = new AlertDialog.Builder(view.getContext()); // Crear la clase alertdialog
@@ -86,8 +113,8 @@ public class Login extends AppCompatActivity {
                     message.show(); // mostramos el mensaje
                 }
                 */
-                Intent goHome = new Intent(Login.this, Home.class);
-                startActivity(goHome);
+                /*Intent goHome = new Intent(Login.this, Home.class);
+                startActivity(goHome);*/
 
 
             }
@@ -112,13 +139,11 @@ public class Login extends AppCompatActivity {
     }
 
     private void verMensaje(String cuerpo){
-        AlertDialog.Builder msj = new AlertDialog.Builder(this);
-        msj.setMessage(cuerpo);
-        msj.show();
+        Toast.makeText(this, cuerpo, Toast.LENGTH_LONG).show();;
     }
 
     private void irMenu(String email){
-        Intent goHome = new Intent(this, MainActivity.class);
+        Intent goHome = new Intent(this, Home.class);
         goHome.putExtra("email",email);
         startActivity(goHome);
     }

@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_home" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/editTextTextClave2"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_txvContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextClave" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -60,10 +60,10 @@
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_registrarse_login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registrarse_registrarUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextClave2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -74,14 +74,14 @@
         android:ems="10"
         android:hint="@string/registro_txvapellido"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/login_txvEmail"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button
-        android:id="@+id/btn_registrarse_login"
+        android:id="@+id/btn_registrarse_registrarUsuario"
         android:layout_width="188dp"
         android:layout_height="67dp"
         android:layout_marginBottom="24dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <EditText
-        android:id="@+id/login_txvContrasena"
+        android:id="@+id/editTextTextClave"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -104,14 +104,14 @@
         android:ems="10"
         android:hint="@string/registro_txvcontrasena"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextClave2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_txvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmail" />
 
     <EditText
-        android:id="@+id/login_txvEmail"
+        android:id="@+id/editTextTextEmail"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -119,7 +119,7 @@
         android:ems="10"
         android:hint="@string/registro_txvemail"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/login_txvContrasena"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextClave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"

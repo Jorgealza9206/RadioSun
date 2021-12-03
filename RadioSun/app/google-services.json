@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "1028376670303",
-    "project_id": "radiosun-147c5",
-    "storage_bucket": "radiosun-147c5.appspot.com"
+    "project_number": "346727065818",
+    "firebase_url": "https://radiosun-3c3a0-default-rtdb.firebaseio.com",
+    "project_id": "radiosun-3c3a0",
+    "storage_bucket": "radiosun-3c3a0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1028376670303:android:ebfe37d44ded7a1689ebea",
+        "mobilesdk_app_id": "1:346727065818:android:e3bd900ec2aeed42cedde3",
         "android_client_info": {
           "package_name": "com.example.radiosun"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1028376670303-53aqdet0d4tqguj14l8hpc2ac32lgrm2.apps.googleusercontent.com",
+          "client_id": "346727065818-ddcqlcvmnh6ek5nm0s6m4d0gjllvja5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.radiosun",
+            "certificate_hash": "dfaaf9e659554d053ece291e37c977e64a404524"
+          }
+        },
+        {
+          "client_id": "346727065818-j8g8mlkfm1vefq4s7rtjqinjc4rsab71.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB-LoQQKxCOUQ0g7P3rHKRzIzVeCcICKa0"
+          "current_key": "AIzaSyB_XG1ToKBWpqqwZA9dPYU2nm82egEDvOc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1028376670303-53aqdet0d4tqguj14l8hpc2ac32lgrm2.apps.googleusercontent.com",
+              "client_id": "346727065818-j8g8mlkfm1vefq4s7rtjqinjc4rsab71.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

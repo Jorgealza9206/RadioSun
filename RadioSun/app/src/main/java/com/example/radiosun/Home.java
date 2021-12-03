@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Home extends AppCompatActivity {
 
     @Override
@@ -88,6 +90,8 @@ public class Home extends AppCompatActivity {
                 Alert_CerrarSesion.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth autenticacion = FirebaseAuth.getInstance();
+                        autenticacion.signOut();
                         Intent goLogin = new Intent(Home.this, Login.class);
                         startActivity(goLogin);
                     }

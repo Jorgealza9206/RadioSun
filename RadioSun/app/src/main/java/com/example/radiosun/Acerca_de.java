@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Acerca_de extends AppCompatActivity {
 
     @Override
@@ -68,6 +70,8 @@ public class Acerca_de extends AppCompatActivity {
                 Alert_CerrarSesion.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth autenticacion = FirebaseAuth.getInstance();
+                        autenticacion.signOut();
                         Intent goLogin = new Intent(Acerca_de.this, Login.class);
                         startActivity(goLogin);
                     }

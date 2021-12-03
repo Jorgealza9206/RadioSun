@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Map extends AppCompatActivity {
 
@@ -89,8 +90,11 @@ public class Map extends AppCompatActivity {
                 Alert_CerrarSesion.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth autenticacion = FirebaseAuth.getInstance();
+                        autenticacion.signOut();
                         Intent goLogin = new Intent(Map.this, Login.class);
                         startActivity(goLogin);
+
                     }
                 });
                 Alert_CerrarSesion.show();
