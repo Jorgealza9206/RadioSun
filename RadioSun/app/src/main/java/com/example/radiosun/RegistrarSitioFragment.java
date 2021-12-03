@@ -209,16 +209,19 @@ public class RegistrarSitioFragment extends DialogFragment {
 
         id = stdao.Insertar(sit);
 
+        sit.setId((int)id);
+
         ArrayList<Sitio> sitios= stdao.listar(null);
 
         //Insertar en Firebase Real-Time
 
         database = FirebaseDatabase.getInstance();
+        database.setPersistenceEnabled(true);
         database.getReference().child("Sitio").child(UUID.randomUUID().toString()).setValue(sit);
 
         //Autenticación
 
-        
+
 
         return id;
     }
