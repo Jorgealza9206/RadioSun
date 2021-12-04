@@ -107,7 +107,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/btn_colocarMapa"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"

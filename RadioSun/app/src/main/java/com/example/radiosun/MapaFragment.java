@@ -15,6 +15,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
+import com.example.radiosun.modelos.Sitio;
+
+import java.sql.Array;
+import java.util.ArrayList;
 
 public class MapaFragment extends Fragment {
 
@@ -31,17 +39,15 @@ public class MapaFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng bogota = new LatLng(4.6396246983068865, -74.08485188328156);
-            googleMap.addMarker(new MarkerOptions().position(bogota).title("Marker in Bogota"));
-            googleMap.setMinZoomPreference(5);
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(bogota));
-            ((Map) getActivity()).actualizarCoordenadas(bogota.latitude,bogota.longitude);
+
+            llenarMarcadores(googleMap,null);
             googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
                 public void onMapClick(@NonNull LatLng latLng) {
                     googleMap.clear();
                     LatLng coordenada = new LatLng(latLng.latitude, latLng.longitude);
-                    googleMap.addMarker(new MarkerOptions().position(coordenada).title("Posicion"));
+                    llenarMarcadores(googleMap,coordenada);
+                    googleMap.addMarker(new MarkerOptions().position(coordenada).title("Nueva Posicion"));
                     googleMap.setMinZoomPreference(5);
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(coordenada));
                     ((Map) getActivity()).actualizarCoordenadas(latLng.latitude, latLng.longitude);
@@ -68,5 +74,27 @@ public class MapaFragment extends Fragment {
         }
 
 
+    }
+    public void llenarMarcadores(GoogleMap googleMap,LatLng coordenada){
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        db.getReference().child("Sitio").get().addOnCompleteListener(getActivity(), new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful()){
+                    LatLng ultimacoordenada = coordenada;
+                    for(DataSnapshot registro : task.getResult().getChildren())
+                    {
+                        Sitio s = registro.getValue(Sitio.class);
+                        LatLng marcador = new LatLng(s.getLatitud(), s.getLongitud());
+                        googleMap.addMarker(new MarkerOptions().position(marcador).title(s.getNombre()));
+                        if(coordenada==null){
+                            ultimacoordenada = marcador;
+                        }
+                    }
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(ultimacoordenada));
+
+                }
+            }
+        });
     }
 }

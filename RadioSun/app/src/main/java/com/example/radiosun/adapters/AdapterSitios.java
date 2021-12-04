@@ -1,7 +1,10 @@
 package com.example.radiosun.adapters;
 
+import static androidx.test.InstrumentationRegistry.getContext;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +14,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.radiosun.Home;
+import com.example.radiosun.Map;
 import com.example.radiosun.R;
 import com.example.radiosun.Sitios;
 import com.example.radiosun.clases.Mensajes;
@@ -87,6 +93,7 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
             ImageButton btneditar = (ImageButton) itemView.findViewById(R.id.sitio_btneditar);
             ImageButton btneliminar = (ImageButton) itemView.findViewById(R.id.sitio_btneliminar);
             ImageView imagen_sitio = (ImageView) itemView.findViewById(R.id.sitio_image);
+            ImageButton btnMapa = (ImageButton) itemView.findViewById(R.id.btn_colocarMapa);
 
             btneliminar.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -120,6 +127,14 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
                 }
             });
 
+            /*btnMapa.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent goMap = new Intent(itemView.getContext(), Map.class);
+                    startActivity(goMap);
+                }
+            });*/
+
         }
 
         public void cargarDatos(Sitio sitio)
@@ -144,5 +159,6 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
 
             id = sitio.getId();
         }
+
     }
 }
