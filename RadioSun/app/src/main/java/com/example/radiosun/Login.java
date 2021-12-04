@@ -53,12 +53,12 @@ public class Login extends AppCompatActivity {
         Button btnRegistro = (Button) findViewById(R.id.btn_registrarse_registrarUsuario);
         TextView restablecer = (TextView) findViewById(R.id.link_restablecerClave);
         ImageButton btnGoogle = (ImageButton) findViewById(R.id.login_google);
-        /*restablecer.setOnClickListener(new View.OnClickListener() {
+        restablecer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                restablecerClave.newInstance("mParam1","mParam2").show(getSupportFragmentManager(),null);
+                restablecerClave.newInstance().show(getSupportFragmentManager(),null);
             }
-        });*/
+        });
 
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override

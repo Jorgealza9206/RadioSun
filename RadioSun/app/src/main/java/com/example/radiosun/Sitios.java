@@ -20,8 +20,12 @@ import android.widget.EditText;
 import com.example.radiosun.adapters.AdapterSitios;
 import com.example.radiosun.clases.dao.SitioDAO;
 import com.example.radiosun.modelos.Sitio;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -136,8 +140,29 @@ public class Sitios extends AppCompatActivity {
         sitios_recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         //sitios_recycler.setLayoutManager(new GridLayoutManager(this, 1));
         //listaDatos = new ArrayList<String>();
-        SitioDAO sidao = new SitioDAO(this);
-        AdapterSitios adaptador = new AdapterSitios(sidao.listar(txtBusqueda.getText().toString()));
+
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        db.getReference().child("Sitio").get().addOnCompleteListener(this, new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful())
+                {
+                    ArrayList<Sitio> sitiosLs = new ArrayList<Sitio>();
+                    for(DataSnapshot registro : task.getResult().getChildren())
+                    {
+                        Sitio s = registro.getValue(Sitio.class);
+                        sitiosLs.add(s);
+
+                    }
+                    AdapterSitios adaptador = new AdapterSitios(sitiosLs);
+                    sitios_recycler.setAdapter(adaptador);
+
+                }
+            }
+        });
+
+//        SitioDAO sidao = new SitioDAO(this);
+//        AdapterSitios adaptador = new AdapterSitios(sidao.listar(txtBusqueda.getText().toString()));
 
 
         listaSitios = new ArrayList<>();
@@ -149,7 +174,7 @@ public class Sitios extends AppCompatActivity {
             listaDatos.add("Dato #" + i + " ");
 
         }*/
-        sitios_recycler.setAdapter(adaptador);
+//        sitios_recycler.setAdapter(adaptador);
     }
 
 

@@ -74,7 +74,7 @@ public class SitioDAO extends SQLiteConex {
         //Este cursor lo que hace es tomar la consulta de la base de datos y crea un ArrayList con
         //lo encontrado en la query
 
-/*        Cursor cregistros = db.rawQuery(consultaSql,null);
+        Cursor cregistros = db.rawQuery(consultaSql,null);
 
         if(cregistros.moveToFirst()){
             do{
@@ -103,7 +103,7 @@ public class SitioDAO extends SQLiteConex {
         cregistros.close();
 
         return sitios;
-    }*/
+    }
 
     public boolean eliminar(long id)
     {
