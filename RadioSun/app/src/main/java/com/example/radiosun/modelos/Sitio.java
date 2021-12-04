@@ -42,8 +42,8 @@ public class Sitio {
     }
 
     public void setLatitud(double latitud) {
-            this.latitud = latitud;
-        }
+        this.latitud = latitud;
+    }
 
     public double getLongitud() {
         return longitud;

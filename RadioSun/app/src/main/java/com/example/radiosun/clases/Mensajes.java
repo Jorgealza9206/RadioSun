@@ -56,3 +56,4 @@ public class Mensajes {
         Snackbar.make(vista, cuerpo, Snackbar.LENGTH_LONG).show();
     }
 }
+

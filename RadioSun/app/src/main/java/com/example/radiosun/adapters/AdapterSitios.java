@@ -1,7 +1,5 @@
 package com.example.radiosun.adapters;
 
-import static androidx.test.InstrumentationRegistry.getContext;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.radiosun.Home;
 import com.example.radiosun.Map;
 import com.example.radiosun.R;
 import com.example.radiosun.Sitios;
@@ -127,7 +124,7 @@ public class AdapterSitios extends RecyclerView.Adapter<AdapterSitios.ViewHolder
                 }
             });
 
-            /*btnMapa.setOnClickListener(new View.OnClickListener() {
+           /* btnMapa.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent goMap = new Intent(itemView.getContext(), Map.class);

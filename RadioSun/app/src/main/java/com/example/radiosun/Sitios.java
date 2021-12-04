@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,7 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.radiosun.adapters.AdapterSitios;
-import com.example.radiosun.clases.dao.SitioDAO;
 import com.example.radiosun.modelos.Sitio;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
