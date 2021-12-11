@@ -1,6 +1,7 @@
 package com.example.radiosun.interfaces;
 
 import com.example.radiosun.modelos.Peticion;
+import com.example.radiosun.modelos.Propiedades;
 import com.example.radiosun.modelos.Sitio;
 
 import java.util.List;
@@ -13,6 +14,6 @@ import retrofit2.http.Path;
 public interface radiacionAPI {
 
     @GET("api/temporal/climatology/point")
-    Call<Peticion> peticion(@Field("properties.parameter.ALLSKY_SFC_SW_DWN.ANN") double radiacion)
+    Call<Propiedades> peticion(@Field("properties") Propiedades radiacion);
 
 }

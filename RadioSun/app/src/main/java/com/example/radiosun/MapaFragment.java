@@ -12,7 +12,9 @@ import android.widget.Toast;
 
 import com.example.radiosun.clases.Mensajes;
 import com.example.radiosun.interfaces.radiacionAPI;
+import com.example.radiosun.modelos.ALLSKY_SFC_SW_DWN;
 import com.example.radiosun.modelos.Peticion;
+import com.example.radiosun.modelos.Propiedades;
 import com.example.radiosun.modelos.Sitio;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -35,6 +37,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MapaFragment extends Fragment {
+
+    public static ALLSKY_SFC_SW_DWN r;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -103,34 +107,34 @@ public class MapaFragment extends Fragment {
                         }
                     }
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(ultimacoordenada));
-
                 }
             }
         });
     }
 
-    private ArrayList<Object> radiacion(String latitud, String longitud, View v){
-        ArrayList<Object> r;
+    public static void radiacion(String latitud, String longitud){
+        Object objeto;
+        Propiedades propiedades=new Propiedades();
         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://power.larc.nasa.gov/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
         radiacionAPI radAPI = retrofit.create(radiacionAPI.class);
-        Call<Peticion> call = radAPI.peticion();
-        call.enqueue(new Callback<Sitio>() {
+        Call<Propiedades> call = radAPI.peticion(propiedades);
+        call.enqueue(new Callback<Propiedades>() {
             @Override
-            public void onResponse(Call<Sitio> call, Response<Sitio> response) {
+            public void onResponse(Call<Propiedades> call, Response<Propiedades> response) {
                 try{
                     if(response.isSuccessful()){
-                        Peticion p = response.body();
+                        Propiedades p = response.body();
                         String URL = "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN&community=RE&longitude=" + longitud + "&latitude=" + latitud + "&format=JSON";
-                        r = p.properties.parameter.ALLSKY_SFC_SW_DWN.ANN;
+                        r = p.parameter.ALLSKY_SFC_SW_DWN;
                     }
                 }catch(Exception ex){
-                    new Mensajes(v.getContext()).toast("No se encontró la latitud" );
+                   // new Mensajes(v.getContext()).toast("No se encontró la latitud" );
                 }
             }
 
             @Override
-            public void onFailure(Call<Sitio> call, Throwable t) {
+            public void onFailure(Call<Propiedades> call, Throwable t) {
 
             }
         });
